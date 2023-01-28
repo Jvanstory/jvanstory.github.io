@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Roboto&family=Roboto+Condensed&family=Source+Sans+Pro&display=swap');
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+tr:nth-child(even){
+    background-color: #8b74b1;
+}
+tr:nth-child(odd){
+    background-color: rgb(185, 181, 255);
+}
+tr:nth-child(1){
+    background-color: rgb(107, 107, 255);
+}
+
+.button{
+    background-color: #7F636E;
+    color: #CAC4CE;
+}
+
+select:active, select:hover {
+    outline-color: red;
+    color: red;
+  }
+
+/* label{
+    color: #426B69;
+} */
+
+/* body{
+    background-color: #1C4E4B;
+    color: #B6B6B6;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+} */
+
+a{
+    color: rgb(70, 141, 0);
+}
+
+::placeholder{
+    color: #8b74b1;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type='checkbox'] {
+    accent-color: red;
+}

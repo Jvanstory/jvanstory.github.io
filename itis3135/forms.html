@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        
+    </style>
+    <head>
+        <link rel="stylesheet" href="default.css">
+        <title>Forms</title>
+    </head>
+    <body>
+        <div class="topnav">
+			<a href="https://webpages.charlotte.edu/jvanstor/">Home</a>
+            <br>
+			<a href="https://webpages.charlotte.edu/jvanstor/itis3135/">Click to go to ITIS3135 Site</a>
+			<br>
+			<a href="https://webpages.charlotte.edu/jvanstor/itis3135/tables.html">Click to go to my Tables</a>
+            <br>
+            <a href="https://webpages.charlotte.edu/jvanstor/itis3135/forms.html">Click to go to my Forms</a>
+		</div>
+        <header>
+            <h1>ITIS 3135 || Joseph Vanstory</h1>
+        </header>
+        <main>
+            <h2>HTML Forms</h2>
+            <form action="#">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" size="30" placeholder="John Doe" required><br>
+                <label for="pnumber">Phone Number:</label><br>
+                <input type="number" id="number" name="number" placeholder="1234567890"><br>
+                <label for="email">Email</label><br>
+                <input type="text" name="email" id="email" size="50" placeholder="example@gmail.com" required><br>
+                <fieldset>
+                    <label for="animal">Favorite Animal</label><br>
+                    <input class='checkbox' type="checkbox" name="animal" id="cat"><label for="cat">Cat</label>
+                    <input type="checkbox" name="animal" id="dog"><label for="dog">Dog</label>
+                    <input type="checkbox" name="animal" id="fish"><label for="fish">fish</label>
+                </fieldset>
+                <fieldset>
+                    <label for="scooby">Favorite Scooby Doo Character</label><br>
+                    <input type="radio" name="scooby" id="fred"><label for="fred">Fred</label><br>
+                    <input type="radio" name="scooby" id="daphne"><label for="daphne">Daphne</label><br>
+                    <input type="radio" name="scooby" id="velma"><label for="velma">Velma</label><br>
+                    <input type="radio" name="scooby" id="shaggy"><label for="shaggy">Shaggy</label><br>
+                    <input type="radio" name="scooby" id="scooby"><label for="scooby">Scooby-Doo</label><br>
+                </fieldset>
+                <label for="color">Favorite Color</label>
+                <select name="color" id="color">
+                    <option value="blue">Blue</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="green">Green</option>
+                    <option value="purple">Purple</option>
+                    <option value="red">Red</option>
+                </select>
+                <br>
+                <button class="button" type="reset">Reset</button>
+                <button class="button" type="submit">Submit</button>
+            </form>
+
+        </main>
+            <footer>
+
+            </footer>
+    </body>
+</html>
