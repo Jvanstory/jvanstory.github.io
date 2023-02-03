@@ -4,22 +4,25 @@
         
     </style>
     <head>
-        <link rel="stylesheet" href="default.css">
-        <title>Forms</title>
+        <link rel="stylesheet" href="styles/default.css">
+        <title>ITIS 3135 || Joseph Vanstory || Forms || webpages.uncc.edu.jvanstor
+        </title>
     </head>
     <body>
-        <div class="topnav">
-			<a href="https://jvanstory.github.io/">Home</a>
-            <br>
-			<a href="https://jvanstory.github.io/itis3135/">Click to go to ITIS3135 Site</a>
-			<br>
-			<a href="https://jvanstory.github.io/itis3135/tables.html">Click to go to my Tables</a>
-            <br>
-            <a href="https://jvanstory.github.io/itis3135/forms.html">Click to go to my Forms</a>
-		</div>
         <header>
             <h1>ITIS 3135 || Joseph Vanstory</h1>
         </header>
+        <nav class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="https://webpages.charlotte.edu/jvanstor/">Home</a>
+                <a href="https://webpages.charlotte.edu/jvanstor/itis3135/">ITIS3135</a>
+                <a href="https://webpages.charlotte.edu/jvanstor/itis3135/tables.html">Tables</a>
+                <a href="https://webpages.charlotte.edu/jvanstor/itis3135/forms.html">Forms</a>
+                <a href="https://webpages.charlotte.edu/jvanstor/vanstoryenterprised.com/">VanstoryEnterprised</a>
+                <a href="https://webpages.charlotte.edu/jvanstor/itis3135/website_evaluations.html">Website Evalutations</a>
+            </div>
+        </nav>
         <main>
             <h2>HTML Forms</h2>
             <form action="#">
@@ -59,7 +62,17 @@
 
         </main>
             <footer>
-
+                <a href="https://validator.w3.org/check?uri=referer" id = "validation_link_html">
+                    <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." />
+                </a>
+                <a href="https://jigsaw.w3.org/css-validator/check/referer" id = "validation_link_html">
+                    <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." />
+                </a>
+                <script id = "validation_link_html">document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);                   
+                </script>
+                <script id = "validation_link_css">document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+                </script>
+                <div>Copywrited by <a href="https://webpages.charlotte.edu/jvanstor/vanstoryenterprised.com/about.html">VanstoryEnterprised</a></div>
             </footer>
     </body>
 </html>
