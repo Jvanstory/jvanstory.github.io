@@ -3,6 +3,7 @@
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
 }
 tr:nth-child(even){
     background-color: #8b74b1;
@@ -31,11 +32,18 @@ label{
 body{
     background-color: #222629;
     color: white;
-    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    max-width: 960px; 
+    margin: 0 5%;
 }
 
 a{
     color: rgb(70, 141, 0);
+    font-family: 'arial'
+}
+
+a:link{
+    text-decoration: none;
 }
 
 ::placeholder{
