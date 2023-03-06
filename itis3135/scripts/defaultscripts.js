@@ -1,3 +1,72 @@
+$(function (){
+    console.log("made it here");
+    console.log(location.pathname);
+    console.log(location.pathname.split("/").splice(-1));
+    const pathname = String(location.pathname.split("/").splice(-1));
+    const links = {
+        "1": {
+            "url": "index.html",
+            "text": "Home",
+            "alt": "Example Homepage"
+        },
+        "2": {
+            "url": "template.html",
+            "text": "Template Page",
+            "alt": "Template Link"
+        },
+        "3": {
+            "url": "tables.html",
+            "text": "HTML Tables",
+            "alt": "Single and Complex Table Demonstration"
+        },
+        "4": {
+            "url": "forms.html",
+            "text": "HTML Forms",
+            "alt": "Single and Complex Table Demonstration"
+        }, 
+        "5": {
+            "url": "website_evaluations.html",
+            "text": "Website Evaulations",
+            "alt": "Single and Complex Table Demonstration"
+        },
+        "6": {
+            "url": "firstscripts.html",
+            "text": "Javascript First Scripts",
+            "alt": "Single and Complex Table Demonstration"
+        },
+        "7": {
+            "url": "polygons.html",
+            "text": "Polygons",
+            "alt": "Single and Complex Table Demonstration"
+        }, 
+        "8": {
+            "url": "calculator_try.html",
+            "text": "Calculator Try",
+            "alt": "Single and Complex Table Demonstration"
+        },
+        "9": {
+            "url": "calculator_fcc.html",
+            "text": "Calculator FCC",
+            "alt": "Single and Complex Table Demonstration"
+        }
+    };
+
+    const linkSeparator = " | ";
+    let htmlString = "";
+
+    for(let id in links){
+        if(pathname === links[id]['url']){
+            htmlString += links[id]['text'];
+        } else {
+            htmlString += '<a href="' + links[id]['url'] + '">' + links[id]['text'] + '</a>';
+        }
+        if(Number(id) < Object.keys(links).length){
+            htmlString += linkSeparator;
+        }
+    }
+    $('#siteLinks').html(htmlString);
+});
+
 function greeting(){
     var fullName = document.getElementById("fullName").value;
     console.log(fullName);
@@ -58,10 +127,6 @@ introduction.innerHTML = "introduction";
 document.getElementsByTagName ('nav') [0].appendChild (home);
 document.getElementsByTagName ('nav') [0].appendChild (introduction);
 
-// <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-// <script>
-//         $(function () {
-//             $("#header").load("components/header.html");
-//             $("#footer").load("components/footer.html");
-//         });
-//     </script>
+
+
+
