@@ -116,10 +116,35 @@ input[type='checkbox'] {
     width: 800px;
     margin: 0 auto;
   }
-  .calculator .numbers {
+ 
+.calculator .numbers {
     width: 100%;
     height: 60px;
     font-size: 32px;
     margin: 0 auto;
   }
-  
+
+.slideimage{
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.prev, .next{
+    width: 50px;
+    height: 50px;
+}
+
+.indent{
+    text-indent: 2%;
+}
+
+.doubleindent{
+    padding-left: 8%;
+}
+
+.figimage{
+    width: 80%;
+    height: 50%;
+}

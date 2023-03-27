@@ -1,0 +1,122 @@
+/* background image */
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/Candle-Background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* top heading */
+header,
+h2 {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  padding-top: 20px;
+  text-shadow: 0 0 1px white, 0 0 1px white, 0 0 1px white, 0 0 1px white;
+}
+
+/* font size */
+body {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* table format*/
+td,
+th {
+  border: 1px solid black;
+  padding: 1%;
+  background-color:#262626;
+  color:powderblue;
+  text-align: left;
+  border: 1px solid black;
+  border-collapse: collapse;
+  column-width: auto;
+}
+
+th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color:#262626;
+  color:rgb(249, 230, 143);
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  width: 100%;
+  table-layout: auto;
+}
+
+/* form */
+form {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  color:black;
+}
+
+
+/* footer bottom of page*/
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+abbr {
+  text-decoration: none;
+
+}
+
+/* whitespace */
+.whitespace {
+  padding: 10px;
+}
+
+.whitespace2 {
+  padding: 60px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+  max-height: 100px;
+  float: left;
+}
+
+.product {
+  width: 50px;
+}
+
+form{
+  color: white;
+}
+
+button{
+  color: white;
+  background-color: black;
+}
+
+a{
+  color: white;
+}

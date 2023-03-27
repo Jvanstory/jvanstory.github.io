@@ -9,6 +9,7 @@
     <body>
         <header>
             <nav id="siteLinks"></nav>
+            <br><nav id="secondLinks"></nav>
             <h1>ITIS 3135 || Joseph Vanstory's Jittery Vulture</h1>
         </header>
         <main>
@@ -16,25 +17,31 @@
             <input type="text" placeholder="Enter Name" id="fullName">
             <input type="text" placeholder="Enter mood" id="mood">
             <button type="button" onclick="greeting();">Welcome</button>
-            <p>Vulture Adder: </p>
+            <p id="greet" class="greet"></p>
+            <h3>Vulture Adder:</h3>
             <input type="text" placeholder="Enter Number" id="addinput1">
             <input type="text" placeholder="Enter Number" id="addinput2">
             <button type="button" onclick="addition();">ADD</button>
-            <p>Vulture Subtraction: </p>
+            <p id="sum" class="sum"></p>
+            <h3>Vulture Subtraction: </h3>
             <input type="text" placeholder="Enter Number" id="subinput1">
             <input type="text" placeholder="Enter Number" id="subinput2">
             <button type="button" onclick="subtraction();">Subtract</button>
-            <p>Vulture Multiplication</p>
+            <p id="subsum" class="subsum"></p>
+            <h3>Vulture Multiplication</h3>
             <input type="text" placeholder="Enter Number" id="multinput1">
             <input type="text" placeholder="Enter Number" id="multinput2">
             <button type="button" onclick="multiplication();">Multiplication</button>
-            <p>Vulture Division</p>
+            <p id="multsum" class="multsum"></p>
+            <h3>Vulture Division</h3>
             <input type="text" placeholder="Enter Number" id="divinput1">
             <input type="text" placeholder="Enter Number" id="divinput2">
             <button type="button" onclick="division();">Division</button>
-            <p>Calculate 7% Vulture Tax</p>
+            <p id="divsum" class="divsum"></p>
+            <h3>Calculate 7% Vulture Tax</h3>
             <input type="text" placeholder="Enter Number" id="taxinput1">
             <button type="button" onclick="tax();">Calulate Tax</button>
+            <p id="tax" class="tax"></p>
         </main>
         <footer>
             <a href="https://validator.w3.org/check?uri=referer" id = "validation_link_html">

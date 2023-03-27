@@ -48,9 +48,41 @@ $(function (){
             "url": "calculator_fcc.html",
             "text": "Calculator FCC",
             "alt": "Single and Complex Table Demonstration"
+        },
+        "10":{
+            "url": "arrays.html",
+            "text": "Arrays"
+        },
+        "11":{
+            "url": "slideshow.html",
+            "text": "Slideshow"
+        },
+        "12":{
+            "url": "contract.html",
+            "text": "Contract"
+        },
+        "13":{
+            "url": "project1.html",
+            "text": "Project1"
         }
     };
 
+    const secondlinks = {
+        "1":{
+            "url": "https://webpages.charlotte.edu/jvanstor/itis3135/stuff/bad%20Name@2.htm",
+            "text": "Bad Website"
+        },
+        "2":{
+            "url": "accessibility/Vanstory_Activity_Accessibility.html",
+            "text": "Accessibility"
+        },
+        "3":{
+            "url": "hobby",
+            "text": "Hobby"
+        }
+    }
+
+    let secondString = "";
     const linkSeparator = " | ";
     let htmlString = "";
 
@@ -64,15 +96,53 @@ $(function (){
             htmlString += linkSeparator;
         }
     }
+    for(let id in secondlinks){
+        if(pathname === secondlinks[id]['url']){
+            secondString += secondlinks[id]['text'];
+        } else {
+            secondString += '<a href="' + secondlinks[id]['url'] + '">' + secondlinks[id]['text'] + '</a>';
+        }
+        if(Number(id) < Object.keys(secondlinks).length){
+            secondString += linkSeparator;
+        }
+    }
     $('#siteLinks').html(htmlString);
+    $('#secondLinks').html(secondString);
 });
+
+let slideIndex = 1;
+const slides = document.querySelectorAll('#slideshow .slides .slide');
+const prev = document.querySelector('#slideshow .prev');
+const next = document.querySelector('#slideshow .next');
+
+function showSlide(n) {
+  if (n > slides.length) {
+    slideIndex = 1;
+  } else if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slides[slideIndex-1].style.display = 'block';
+}
+
+function prevSlide() {
+  showSlide(slideIndex -= 1);
+}
+
+function nextSlide() {
+  showSlide(slideIndex += 1);
+}
+
+showSlide(slideIndex);
 
 function greeting(){
     var fullName = document.getElementById("fullName").value;
     console.log(fullName);
     var mood = document.getElementById("mood").value;
     console.log(mood);
-    alert("The Jittery Vultures welcomes you, " + fullName + "! We're glad you are doing " + mood);
+    document.getElementById("greet").innerHTML = "The Jittery Vultures welcomes you, " + fullName + "! We're glad you are doing " + mood;
 }
 
 date =  new Date();
@@ -86,34 +156,34 @@ function addition(){
     var input1 = Number(document.getElementById("addinput1").value);
     var input2 = Number(document.getElementById("addinput2").value);
     value = (input1) + (input2);
-    alert(value);
+    document.getElementById("sum").innerHTML = value;
 }
 
 function subtraction(){
     var input1 = Number(document.getElementById("subinput1").value);
     var input2 = Number(document.getElementById("subinput2").value);
     value = (input1) - (input2);
-    alert(value);
+    document.getElementById("subsum").innerHTML = value;
 }
 
 function multiplication(){
     var input1 = Number(document.getElementById("multinput1").value);
     var input2 = Number(document.getElementById("multinput2").value);
     value = (input1) * (input2);
-    alert(value);
+    document.getElementById("multsum").innerHTML = value;
 }
 
 function division(){
     var input1 = Number(document.getElementById("divinput1").value);
     var input2 = Number(document.getElementById("divinput2").value);
     value = (input1) / (input2);
-    alert(value);
+    document.getElementById("divsum").innerHTML = value;
 }
 
 function tax(){
     var input1 = Number(document.getElementById("taxinput1").value);
     value = input1 + (input1 * .07);
-    alert(value);
+    document.getElementById("tax").innerHTML = value;
 }
 
 const home = document.createElement ('a'); 
@@ -126,7 +196,4 @@ introduction.innerHTML = "introduction";
 
 document.getElementsByTagName ('nav') [0].appendChild (home);
 document.getElementsByTagName ('nav') [0].appendChild (introduction);
-
-
-
 

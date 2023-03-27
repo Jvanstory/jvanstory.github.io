@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <style>
+            body{
+                color: whitesmoke;
+                background-color: #222629;
+                font-family: 'Poppins', 'Roboto', sans-serif;
+                padding-left: 1%;
+            }
+            section{
+                padding: 5%;
+            }
+            img{
+                max-height: 400px;
+            }
+            a{
+                color: green;
+                text-decoration: none;
+                
+            }
+            main section:not(.active) {
+                display: none;
+            }
+            p {
+                flex: 1;
+                margin: 0;
+                padding: 0;
+                text-align: justify;
+            }
+        </style>
+        <title>ITIS 3135 || Joseph Vanstory's Jittery Vulture || Hobby</title>
+    </head>
+    <body>
+        <header>
+            <h1>Home</h1>
+            <nav>
+                    <p><a href="#" class="active" data-section="home">Home</a>  |  
+                    <a href="#" data-section="who">Who</a>  |  
+                    <a href="#" data-section="when">When</a>  |  
+                    <a href="#" data-section="where">Where</a>  |  
+                    <a href="#" data-section="how">How</a>  |  
+                    <a href="#" data-section="why">Why</a></p>
+            </nav>
+        </header>
+        <main>
+        <section id="who" class="grid-container">
+            <h2>Who</h2>
+            <figure>
+                <img src="images/keyboard_and_controller.jpg" alt="keyboard and controller">
+                <figcaption>An example of a keyboard and controller</figcaption>
+            </figure>
+            <p>My name is Joe. I am currently a senior at UNCC. I am majoring in Computer Science with a concentration in Software Engineering.</p><br>
+            <p>My favorite hobby is gaming. This has been my favorite hobby for a long time. I primarily play multiplayer games with my friends.</p>
+        </section>  
+        <section id="home" class="active grid-container">
+            <h2>What</h2>
+            <figure>
+                <img src="images/phas.png" alt="Phasmophobia">
+                <figcaption>Screenshot of Phasmophobia loading screen</figcaption>
+            </figure>
+            <p>My favorite hobby is gaming. I primarily play games using my computer. I also sometimes play on the nintendo wii.</p><br>
+            <p>My current favorite game is phasmophobia. Phasmophobia is a multiplayer horror game. In this game, you are trying to figure out what kind of ghost is haunting the location, while the ghost is hunting you.</p>
+        </section>
+        <section id="when" class="grid-container">
+            <h2>When</h2>
+            <figure>
+                <img src="images/nighttime_game.jpg" alt="Gaming at night">
+                <figcaption>Gaming at night</figcaption>
+            </figure>
+            <p>I primarily play games at night after all my homework and work is done.</p><br>
+            <p>I will play the most on the weekends. I will usually play for a couple of hours at a time.</p>
+        </section>
+        <section id="where" class="grid-container">
+            <h2>Where</h2>
+            <figure>
+                <img src="images/discord.jpg" alt="Discord">
+                <figcaption>Discord app</figcaption>
+            </figure>
+            <p>I almost always play games in my room. I will play online, talking with my friends over discord. Discord is a chat app where we can talk to each other online.</p><br>
+            <p>I will also go over to friend's houses or apartments to play games in person with them. They will also come over to be able to play games in person. We will usually play the wii or the switch if we are going to each others places.</p>
+        </section>
+        <section id="how" class="grid-container">
+            <h2>How</h2>
+            <figure>
+                <img src="images/wii.jpg" alt="Wii">
+                <figcaption>Wii</figcaption>
+            </figure>
+            <p>The way I play games is using my computer. I will buy games from apps like steam or epic games. I also usually play using keyboard or mouse.</p><br>
+            <p>I will also play games using the wii or the switch. I have several games on both the wii and switch. My favorite game on the wii is mario kart.</p>
+        </section>
+        <section id="why" class="grid-container">
+            <h2>Why</h2>
+            <figure>
+                <img src="images/mario_kart.jpg" alt="Mario Kart">
+                <figcaption>Mario Kart</figcaption>
+            </figure>
+            <p>The reason I play games is because I enjoy them. I enjoy the problem solving aspects or the fun of fps games. My favorite game type is ones that allow you to use your imagination like minecraft.</p><br>
+            <p>I play the wii because I really enjoyed playing it when I was younger. I also play the switch because it is very similar to the wii and has games like mario kart. The biggest reason I like playing on the wii and switch is that I am able to play them with friends when we are together.</p>
+        </section>
+        </main>
+            <footer>
+                <br><br>
+                <div>Copywrited by <a href="https://webpages.charlotte.edu/jvanstor/itis3135/vanstoryenterprised.com/">Vanstory Enterprise</a></div>
+                <a href="https://validator.w3.org/check?uri=referer" id = "validation_link_html">
+                    <img src="/private_html/itis3135/images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." />
+                </a>
+                <a href="https://jigsaw.w3.org/css-validator/check/referer" id = "validation_link_html">
+                    <img src="/private_html/itis3135/images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." />
+                </a>
+                <script id = "validation_link_html">document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);                   
+                </script>
+                <script id = "validation_link_css">document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+                </script>
+            </footer>
+            <script src="/private_html/itis3135/scripts/defaultscripts.js"></script>
+            <script>
+            const sections = document.querySelectorAll('main section');
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                event.preventDefault();
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                link.classList.add('active');
+                const targetSection = link.getAttribute('data-section');
+                sections.forEach(section => {
+                if (section.id === targetSection) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+                    });
+                });
+            });
+            document.getElementById('home').classList.add('active');
+        </script>
+    </body>
+</html>
