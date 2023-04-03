@@ -10,9 +10,8 @@ $(function (){
             "alt": "Example Homepage"
         },
         "2": {
-            "url": "template.html",
-            "text": "Template Page",
-            "alt": "Template Link"
+            "url": "contract.html",
+            "text": "Contract"
         },
         "3": {
             "url": "tables.html",
@@ -58,8 +57,8 @@ $(function (){
             "text": "Slideshow"
         },
         "12":{
-            "url": "contract.html",
-            "text": "Contract"
+            "url": "template.html",
+            "text": "Template"
         },
         "13":{
             "url": "project1.html",
