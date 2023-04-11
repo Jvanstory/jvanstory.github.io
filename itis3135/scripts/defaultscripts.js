@@ -63,6 +63,14 @@ $(function (){
         "13":{
             "url": "project1.html",
             "text": "Project1"
+        },
+        "14":{
+            "url": "review1.html",
+            "text": "Review 1"
+        },
+        "15":{
+            "url": "review2.html",
+            "text": "Review 2"
         }
     };
 
@@ -78,6 +86,18 @@ $(function (){
         "3":{
             "url": "hobby",
             "text": "Hobby"
+        },
+        "4":{
+            "url": "https://webpages.charlotte.edu/jvanstor/project/",
+            "text": "Project"
+        },
+        "5":{
+            "url": "https://webpages.charlotte.edu/jvanstor/Exercise/Vanstory-Activity11.html",
+            "text": "Activity 11"
+        },
+        "6":{
+            "url": "https://webpages.charlotte.edu/jvanstor/Exercise/Vanstory-Activity12.html",
+            "text": "Activity 12"
         }
     }
 

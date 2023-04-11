@@ -155,3 +155,7 @@ input[type='checkbox'] {
 footer {
     margin-top: auto;
   }
+
+  .screenshot{
+    max-width: 500px;
+  }
