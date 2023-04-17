@@ -100,12 +100,19 @@ input[type='checkbox'] {
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-  
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 100px;
 }
+
+@media (max-width: 850px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 100px;
+    }
+  }
 
 .calcbuttons {
     color: black;
@@ -158,4 +165,5 @@ footer {
 
   .screenshot{
     max-width: 500px;
+    width: 100%;
   }

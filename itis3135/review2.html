@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="styles/default.css">    
+        <link rel="stylesheet" href="styles/default.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         <title>ITIS 3135 || Joseph Vanstory's Jittery Vulture || Review 2</title>
     </head>
@@ -14,8 +15,10 @@
         <main>
             <h2>Review 2</h2>
             <h3>Patel, Ayush</h3>
-            <img src="images/projectscreenshot2.png" alt="Client Screen Shot" class="screenshot">
-            <figcaption><a href="https://webpages.charlotte.edu/apate225/itis3135/project/project_1.html">Ayush's Website</a></figcaption>
+            <figure>
+                <img src="images/projectscreenshot2.png" alt="Client Screen Shot" class="screenshot"><br>
+                <figcaption><a href="https://webpages.charlotte.edu/apate225/itis3135/project/project_1.html">Ayush's Website</a></figcaption>
+            </figure>
             <ul>
                 <li>Design: The website has good contrast and font-sizing.</li>
                 <li>Page: The page has a header, footer and main.</li>
@@ -26,20 +29,7 @@
                 <li>Overall: Very nice site with a couple of fixes needed</li>
             </ul>
         </main>
-            <footer>
-                <a href="https://validator.w3.org/check?uri=referer" id = "validation_link_html">
-                    <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." />
-                </a>
-                <a href="https://jigsaw.w3.org/css-validator/check/referer" id = "validation_link_html">
-                    <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." />
-                </a>
-                <script id = "validation_link_html">document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);                   
-                </script>
-                <script id = "validation_link_css">document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-                </script>
-                <div>Vanstory Enterprise</div>
-                <div>Copywrited by <a href="https://webpages.charlotte.edu/jvanstor/itis3135/vanstoryenterprised.com/">Vanstory Enterprise</a></div>
-            </footer>
+        <footer id="footer"></footer>
             <script src="scripts/defaultscripts.js"></script>
             <script src="defaultscripts.js"></script>
     </body>

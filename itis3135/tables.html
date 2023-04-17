@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="styles/default.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ITIS 3135 || Joseph Vanstory's Jittery Vulture || tables</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
@@ -45,6 +46,7 @@
                     <td>Vdinkley@gmail.com</td>
                     <td>20</td>
                 </tr>
+                <tr>
                     <td>Shaggy Rogers</td>
                     <td>Srogers@gmail.com</td>
                     <td>25</td>
@@ -71,11 +73,11 @@
                 <figcaption>Employee Information</figcaption>
                 <table style="width:50%">
                     <tr>
-                        <th id="co1" headers="blank">Category</th>
-                        <th id="co2" headers="blank">Name</th>
-                        <th id="co3" headers="blank">Email</th>
-                        <th id="co4" headers="blank">Years Of Service</th>
-                        <th id="co5" headers="blank">Salary</th>
+                        <th id="co1">Category</th>
+                        <th id="co2">Name</th>
+                        <th id="co3">Email</th>
+                        <th id="co4">Years Of Service</th>
+                        <th id="co5">Salary</th>
                     </tr>
                     <tr>
                         <td headers="co1">Ceo</td>
@@ -97,6 +99,7 @@
                         <td headers="co4">20</td>
                         <td headers="co5">$1,000,000</td>
                     </tr>
+                    <tr>
                         <td rowspan="4" headers="co1">Workers</td>
                         <td headers="co2">Shaggy Rogers</td>
                         <td headers="co3">Srogers@gmail.com</td>
@@ -130,19 +133,7 @@
             </figure>
 
         </main>
-            <footer>
-                <a href="https://validator.w3.org/check?uri=referer" id = "validation_link_html">
-                    <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." />
-                </a>
-                <a href="https://jigsaw.w3.org/css-validator/check/referer" id = "validation_link_html">
-                    <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." />
-                </a>
-                <script id = "validation_link_html">document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);                   
-                </script>
-                <script id = "validation_link_css">document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-                </script>
-                <div>Copywrited by <a href="https://webpages.charlotte.edu/jvanstor/itis3135/vanstoryenterprised.com/">VanstoryEnterprised</a></div>
-            </footer>
+        <footer id="footer"></footer>
             <script src="scripts/defaultscripts.js"></script>
             <script src="/private_html/itis3135/scripts/defaultscripts.js"></script>
     </body>

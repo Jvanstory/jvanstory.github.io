@@ -98,6 +98,14 @@ $(function (){
         "6":{
             "url": "https://webpages.charlotte.edu/jvanstor/Exercise/Vanstory-Activity12.html",
             "text": "Activity 12"
+        },
+        "7":{
+            "url": "https://webpages.charlotte.edu/jvanstor/Exercise/Vanstory-Activity13.html",
+            "text": "Activity 13"
+        },
+        "8":{
+            "url": "https://webpages.charlotte.edu/jvanstor/Exercise/Vanstory-Activity14.html",
+            "text": "Activity 14"
         }
     }
 
@@ -129,6 +137,10 @@ $(function (){
     $('#secondLinks').html(secondString);
 });
 
+$(document).ready(function () {
+    $('#footer').load('./footer.html');
+});
+
 let slideIndex = 1;
 const slides = document.querySelectorAll('#slideshow .slides .slide');
 const prev = document.querySelector('#slideshow .prev');
@@ -156,6 +168,13 @@ function nextSlide() {
 
 showSlide(slideIndex);
 
+var date =  new Date();
+time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+year = date.getFullYear();
+month = date.getMonth() + 1;
+day = date.getDate();
+document.getElementById("date").innerHTML = "Today is " + time + " on " + month + "/" + day + "/" + year;
+
 function greeting(){
     var fullName = document.getElementById("fullName").value;
     console.log(fullName);
@@ -163,13 +182,6 @@ function greeting(){
     console.log(mood);
     document.getElementById("greet").innerHTML = "The Jittery Vultures welcomes you, " + fullName + "! We're glad you are doing " + mood;
 }
-
-date =  new Date();
-time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-year = date.getFullYear();
-month = date.getMonth() + 1;
-day = date.getDate();
-document.getElementById("date").innerHTML = "Today is " + time + " on " + month + "/" + day + "/" + year;
 
 function addition(){
     var input1 = Number(document.getElementById("addinput1").value);

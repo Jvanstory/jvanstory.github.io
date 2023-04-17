@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="styles/default.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ITIS 3135 || Joseph Vanstory's Jittery Vulture || Forms</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     </head>
@@ -18,14 +19,14 @@
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" size="30" placeholder="John Doe" required><br>
                 <label for="pnumber">Phone Number:</label><br>
-                <input type="number" id="number" name="number" placeholder="1234567890"><br>
+                <input type="number" id="pnumber" name="number" placeholder="1234567890"><br>
                 <label for="email">Email</label><br>
                 <input type="text" name="email" id="email" size="50" placeholder="example@gmail.com" required><br>
                 <fieldset>
-                    <label for="animal">Favorite Animal</label><br>
-                    <input class='checkbox' type="checkbox" name="animal" id="cat"><label for="cat">Cat</label>
-                    <input type="checkbox" name="animal" id="dog"><label for="dog">Dog</label>
-                    <input type="checkbox" name="animal" id="fish"><label for="fish">fish</label>
+                    <label>Favorite Animal</label><br>
+                    <input class='checkbox' type="checkbox" name="cat" id="cat"><label for="cat">Cat</label>
+                    <input type="checkbox" name="dog" id="dog"><label for="dog">Dog</label>
+                    <input type="checkbox" name="fish" id="fish"><label for="fish">fish</label>
                 </fieldset>
                 <fieldset>
                     <label for="scooby">Favorite Scooby Doo Character</label><br>
@@ -50,19 +51,7 @@
             </form>
 
         </main>
-            <footer>
-                <a href="https://validator.w3.org/check?uri=referer" id = "validation_link_html">
-                    <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." />
-                </a>
-                <a href="https://jigsaw.w3.org/css-validator/check/referer" id = "validation_link_html">
-                    <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." />
-                </a>
-                <script id = "validation_link_html">document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);                   
-                </script>
-                <script id = "validation_link_css">document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-                </script>
-                <div>Copywrited by <a href="https://webpages.charlotte.edu/jvanstor/itis3135/vanstoryenterprised.com/">VanstoryEnterprised</a></div>
-            </footer>
+        <footer id="footer"></footer>
             <script src="scripts/defaultscripts.js"></script>
             <script src="/private_html/itis3135/scripts/defaultscripts.js"></script>
     </body>
