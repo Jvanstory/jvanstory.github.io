@@ -106,6 +106,10 @@ $(function (){
         "8":{
             "url": "https://webpages.charlotte.edu/jvanstor/Exercise/Vanstory-Activity14.html",
             "text": "Activity 14"
+        }, 
+        "9":{
+            "url": "https://webpages.charlotte.edu/jvanstor/Exercise/Vanstory-Activity15.html",
+            "text": "Activity 15"
         }
     }
 
