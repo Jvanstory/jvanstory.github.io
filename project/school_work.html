@@ -3,25 +3,48 @@
     <head>
         <link rel="stylesheet" href="css/default.css">    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-        <title>School Work</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="jquery.fittext.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="scripts/scroll-up-bar.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="scripts/jquery.emaillink-1.4.js"></script>
+        <title>Education</title>
     </head>
     <body>
-        <header>
+        <header class="fitText">
             <nav id="siteLinks">Nav Links Here</nav>
-            <h1>School Work</h1>
+            <h1>Education</h1>
         </header>
-        <main><br><br><br><br>
+        <main class="fitText"><br><br><br><br>
             <img src="images/uncc.jpg" alt="UNCC">
             <figcaption>UNCC</figcaption>
             <div id="center">
-                <h2>Schooling</h2>
-                <p>Rebekah is currently a senior at UNCC, majoring in Health systems management.</p>
+                <h3>University of North Carolina at Charlotte</h3>
+                <h4>Bachelor of Science in Health Systems
+                    Management, minor in Public Health</h3>
+                <p>Graduation date: May 2023, Charlotte, NC</p>
+                <h2>Awards</h2>
+                <h3>Deans list/ Fall 2021</h3>
+                <p>Spring 2022</p>
+                <h3>Chancellor’s List</h3>
+                <p>Fall 2022</p>
+                <h3>State Employees Credit Union People Helping People Scholarship Recipient</h3>
+                <p>2019</p>
+                <h3>Omicron Delta Kappa</h3>
+                <p>Initiated 2023</p>
                 <h2>Contact Information</h2>
-                <p>Email: rvanstor@uncc.edu</p>
+                <p>Email: <a href="mailto:rvanstor@uncc.edu" class="e-mail">rvanstor@uncc.edu</a></p>
             </div>
         </main>
             <footer>
             </footer>
             <script src="scripts/default.js"></script>
+            <script>$(document).ready(function() {
+                $('a[data-email]').emailLink({
+                    addLinkRef: false
+                });
+              });
+              </script>
     </body>
 </html>

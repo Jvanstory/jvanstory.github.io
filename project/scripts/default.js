@@ -18,7 +18,7 @@ $(function (){
         },
         "4":{
             "url": "school_work.html",
-            "text": "School Work"
+            "text": "Education"
         },
         "5":{
             "url": "about_me.html",
@@ -42,29 +42,16 @@ $(function (){
     $('#siteLinks').html(htmlString);
 });
 
-let slideIndex = 1;
-showSlides(slideIndex);
+$(function() {
+    $( "#accordion" ).accordion();
+  });
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+jQuery("#fitText").fitText();
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+$("#alink").rxHtmlButton({
+      builtinTheme:"rx03"
+    });
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+$(document).ready(function() {
+    $('a[data-email]').emailLink();
+});

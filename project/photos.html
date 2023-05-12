@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="css/default.css">    
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-        <title>Photos</title>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <script src="jquery.fittext.js"></script>
+      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+      
+      <link rel="stylesheet" href="css/default.css">
+      <title class="fitText">Photos</title>
     </head>
     <body>
         <header>
-            <nav id="siteLinks">Nav Links Here</nav>
+            <nav id="siteLinks" class="alink">Nav Links Here</nav>
             <h1>Photos</h1>
         </header>
         <main>
-            <div class="slideshow-container">
-
-                <div class="mySlides fade">
-                  <img src="images/vanstory_rebekah_3.jpg">
-                  <div class="text">Rebekah Vanstory</div>
-                </div>
-                
-                <div class="mySlides fade">
-                  <img src="images/uncc.jpg" style="width:100%">
-                  <div class="text">UNCC</div>
-                </div>
-                
-                <div class="mySlides fade">
-                  <img src="images/uncc2.jpg" style="width:100%">
-                  <div class="text">UNCC</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <img src="images/uncc3.jpg" style="width:100%">
-                    <div class="text">UNCC</div>
+                <div id="accordion">
+                  <h3><a href="#tabs-1">Image of Rebekah Vanstory</a></h3>
+                  <div>
+                    <img src="images/vanstory_rebekah_3.jpg"/>
                   </div>
-                
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-                
+                  <h3><a href="#tabs-2">UNCC</a></h3>
+                  <div>
+                    <img src="images/uncc.jpg"/>
+                  </div>
+                  <h3><a href="#tabs-3">UNCC</a></h3>
+                  <div>
+                    <img src="images/uncc2.jpg"/>
+                  </div>
+                  <h3><a href="#tabs-4">UNCC</a></h3>
+                  <div>
+                    <img src="images/uncc3.jpg"/>
+                  </div>
                 </div>
             <br><br><br><br>
         </main>
