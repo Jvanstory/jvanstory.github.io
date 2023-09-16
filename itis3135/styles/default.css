@@ -1,119 +1,139 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Roboto&family=Roboto+Condensed&family=Source+Sans+Pro&display=swap');
 
+/* Table Styling */
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
 }
-tr:nth-child(even){
+tr:nth-child(even) {
     background-color: #8b74b1;
 }
-tr:nth-child(odd){
+tr:nth-child(odd) {
     background-color: rgb(185, 181, 255);
 }
-tr:nth-child(1){
+tr:nth-child(1) {
     background-color: rgb(107, 107, 255);
 }
 
-.button{
+/* Buttons */
+.button {
     background-color: #7F636E;
     color: #CAC4CE;
 }
 
+/* Select Styles */
 select:active, select:hover {
     outline-color: red;
     color: red;
-  }
+}
 
-label{
+/* Labels */
+label {
     color: #61892f;
-} 
+}
 
-body{
+/* Body Styles */
+body {
     background-color: #222629;
     color: white;
     font-family: 'Poppins', 'Roboto', sans-serif;
-    max-width: 960px; 
+    max-width: 960px;
     margin: 0 5%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-button{
+
+/* Button Styles */
+button {
     color: black;
     background-color: gray;
     border-color: white;
 }
 
-a{
+/* Anchor Styles */
+a {
     color: rgb(70, 141, 0);
-    font-family: 'arial'
+    font-family: 'arial';
 }
 
-a:link{
+a:link {
     text-decoration: none;
 }
 
-::placeholder{
+/* Placeholder Styles */
+::placeholder {
     color: #8b74b1;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Checkbox Styles */
 input[type='checkbox'] {
     accent-color: red;
 }
 
+/* Dropdown Styles */
 .dropbtn {
     background-color: #04AA6D;
     color: white;
     padding: 10px;
     font-size: 16px;
     border: none;
-  }
-  
-  .dropdown {
+}
+
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     font-weight: 100;
     text-shadow: 0 0 0px black, 0 0 0px black, 0 0 0px black, 0 0 0px black;
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: black;
     padding: 12px 8px;
     text-decoration: none;
     display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+}
 
-  .grid-container {
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Grid Styles */
+.grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 100px;
 }
 
-@media (max-width: 850px){
+@media (max-width: 850px) {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 100px;
     }
-  }
+}
 
+/* Calculator Button Styles */
 .calcbuttons {
     color: black;
     background-color: gray;
@@ -122,48 +142,54 @@ input[type='checkbox'] {
     height: 100px;
     font-size: 25px;
 }
+
 .calculator {
     width: 800px;
     margin: 0 auto;
-  }
- 
+}
+
 .calculator .numbers {
     width: 100%;
     height: 60px;
     font-size: 32px;
     margin: 0 auto;
-  }
+}
 
-.slideimage{
+/* Slide Image Styles */
+.slideimage {
     width: auto;
     height: auto;
     max-width: 500px;
     max-height: 500px;
 }
 
-.prev, .next{
+.prev, .next {
     width: 50px;
     height: 50px;
 }
 
-.indent{
+/* Indentation Styles */
+.indent {
     text-indent: 2%;
 }
 
-.doubleindent{
+.doubleindent {
     padding-left: 8%;
 }
 
-.figimage{
+/* Figure Image Styles */
+.figimage {
     width: 80%;
     height: 50%;
 }
 
+/* Footer Styles */
 footer {
     margin-top: auto;
-  }
+}
 
-  .screenshot{
+/* Screenshot Styles */
+.screenshot {
     max-width: 500px;
     width: 100%;
-  }
+}
