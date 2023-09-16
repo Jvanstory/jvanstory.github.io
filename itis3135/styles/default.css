@@ -6,7 +6,7 @@ body {
     background-color: #222629;
     color: white;
     font-family: 'Poppins', 'Roboto', sans-serif;
-    padding: 0 20px; /* Added padding to the sides */
+    padding: 0 10vh; /* Added padding to the sides */
 }
 
 .container {
