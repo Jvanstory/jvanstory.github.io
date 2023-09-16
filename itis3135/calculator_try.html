@@ -2,44 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/default.css">    
-    <title>ITIS 3135 || Joseph Vanstory's Jittery Vulture || Calculator Try</title>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Roboto&family=Roboto+Condensed&family=Source+Sans+Pro&display=swap">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', 'Roboto', sans-serif;
+            text-align: center;
+            background-color: #222629;
+            color: white;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .calculator {
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+        }
+
+        .calculator input[type="text"] {
+            grid-column: span 4;
+            width: 100%;
+            font-size: 24px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #f4f4f4;
+        }
+
+        .calculator button {
+            width: 70px;
+            height: 70px;
+            font-size: 24px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #e0e0e0;
+        }
+
+        .calculator button.operator {
+            background-color: #f1c40f;
+        }
+
+        .calculator button.clear {
+            background-color: #e74c3c;
+        }
+    </style>
 </head>
+<header>
+    <nav id="siteLinks"></nav>
+    <br><nav id="secondLinks"></nav>
+    <h1>ITIS 3135 || Joseph Vanstory's Jittery Vulture</h1>
+</header>
 <body>
-    <header>
-        <nav id="siteLinks"></nav>
-        <br><nav id="secondLinks"></nav>
-        <h1>Calculator Try</h1>
-    </header>
-    <main>
-        <div class="calculator">
-            <div class="numbers" id="numbers"></div>
-            <button class="calcbuttons" onclick="display('0')">0</button>
-            <button class="calcbuttons" onclick="display('1')">1</button>
-            <button class="calcbuttons" onclick="display('2')">2</button>
-            <button class="calcbuttons" onclick="display('3')">3</button>
-            <button class="calcbuttons" onclick="display('4')">4</button>
-            <button class="calcbuttons" onclick="display('5')">5</button>
-            <button class="calcbuttons" onclick="display('6')">6</button>
-            <button class="calcbuttons" onclick="display('7')">7</button>
-            <button class="calcbuttons" onclick="display('8')">8</button>
-            <button class="calcbuttons" onclick="display('9')">9</button>
-            <button class="calcbuttons" onclick="display('.')">.</button>
-            <button class="calcbuttons" onclick="clearNumbers()">Clear</button>
-            <button class="calcbuttons" onclick="display('*')">*</button>
-            <button class="calcbuttons" onclick="display('-')">-</button>
-            <button class="calcbuttons" onclick="display('+')">+</button>
-            <button class="calcbuttons" onclick="display('/')">/</button>
-            <button class="calcbuttons" onclick="calculate()">=</button>
-          </div>
-    </main>
-    <footer id="footer"></footer>
-    <script src="/private_html/itis3135/scripts/calculator_try.js"></script>
-    <script src="scripts/calculator_try.js"></script>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button class="operator" onclick="appendToDisplay('+')">+</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button class="operator" onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button class="operator" onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button class="operator" onclick="calculate()">=</button>
+        <button class="clear" onclick="clearDisplay()">C</button>
+        <button class="operator" onclick="appendToDisplay('/')">/</button>
+    </div>
+
+    <script>
+        let displayValue = '';
+
+        function appendToDisplay(value) {
+            displayValue += value;
+            updateDisplay();
+        }
+
+        function clearDisplay() {
+            displayValue = '';
+            updateDisplay();
+        }
+
+        function calculate() {
+            try {
+                const result = eval(displayValue);
+                displayValue = result.toString();
+                updateDisplay();
+            } catch (error) {
+                displayValue = 'Error';
+                updateDisplay();
+            }
+        }
+
+        function updateDisplay() {
+            document.getElementById('display').value = displayValue;
+        }
+    </script>
+        <footer id="footer"></footer>
+
     <script src="scripts/defaultscripts.js"></script>
     <script src="/private_html/itis3135/scripts/defaultscripts.js"></script>
+
 </body>
 </html>
