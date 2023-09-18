@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<title>Personal Webpage || Joseph Vanstory</title>
-		<link rel="stylesheet" href="../styles/default.css">    
+		<link rel="stylesheet" href="../styles/default.css">  
+		<link rel="stylesheet" href="styles/default.css">  
 	</head>
 	<body>
 		<header>
@@ -17,7 +18,8 @@
 				</nav>
 			</div>
 		</header>
-		<main>
+		<main class="container">
+			<h1 class="pageTitle">Project 1: US Weather</h1>
 			<h2>Introduction</h2>
 			<p>
 				The primary question I seek to address through this dataset pertains to the evolving nature of weather conditions in recent years. Specifically, I am interested in discerning whether these conditions have been on a trajectory of deterioration or have, for the most part, maintained a stable pattern. My overarching goal in analyzing this data is to acquire a comprehensive understanding of the temporal shifts in weather patterns.
@@ -39,23 +41,63 @@
 			<br>
 			<h2>Pre-Processing The Data</h2>
 			<p>
-
+				To prepare my data for analysis, I followed a series of steps. Initially, I loaded the dataset containing weather-related information. To focus on a broader perspective, encompassing weather events across the entire United States rather than specific states or locations, I made the decision to remove columns associated with geographical data. This included the removal of columns containing airport codes, latitude and longitude coordinates, city names, county details, and zip codes. The objective was to extract and analyze trends and patterns at a national level.
+			</p>
+			<p>
+				In the next step, I addressed data quality. To ensure the dataset's completeness and reliability, I eliminated any rows that contained missing or incomplete information. This data cleaning process was crucial to maintain the integrity of the analysis.
+			</p>
+			<p>
+				Additionally, for the purpose of visualizing the data, I excluded records with "unknown" severity levels, as these could introduce ambiguity into the analysis.	
+			</p>
+			<p>
+				Finally, to facilitate temporal analysis, I converted the "startTime" column into a datetime format. This conversion allowed for more precise handling of time-based data and enabled the creation of meaningful visualizations and insights.
 			</p>
 			<br>
 			<h2>Data Understanding/Visualization</h2>
 			<p>
-
+				In the first graph, we examine the "Monthly Severity of Weather Events." Notably, there is a significant increase in the number of events towards the end of each year, followed by a decrease until year-end. This pattern holds true consistently from January 2016 to December 2022.
 			</p>
+			<figure class="center-figure">
+				<img src="images/MonthySeverityWeatherEvents.png" alt="Line graph depicting monthly event counts from January 2016 to December 2022" class="centered-image">
+				<figcaption>Line graph illustrating monthly event counts from January 2016 to December 2022</figcaption>
+			</figure>
+			<p>
+				Next, the second graph visualizes the total number of weather events for each year. The data reveals an increase from 2016 to 2018, followed by a continuous decline in the overall number of weather events. However, this overview prompts further investigation into whether the number of severe weather events follows a similar trend.
+			</p>
+			<figure class="center-figure">
+				<img src="images/TotalNumberWeatherEvents.png" alt="Bar graph showcasing total weather events per year" class="centered-image">
+				<figcaption>Bar graph presenting the total number of weather events per year</figcaption>
+			</figure>
+			<p>
+				To assess changes in the count of severe weather events since 2016, the third graph is provided. It illustrates a substantial spike in severe weather events from 2018 to 2019, followed by a gradual rise from 2019 to 2021, and a subsequent decrease from 2021 to 2022. While the overall number of weather events has decreased, severe weather events remain significantly higher compared to the period from 2016 to 2018.
+			</p>
+			<figure class="center-figure">
+				<img src="images/NumberOfSevereWeatherEvents.png" alt="Line graph displaying the annual count of severe weather events" class="centered-image">
+				<figcaption>Graph depicting the annual count of severe weather events</figcaption>
+			</figure>
+			<p>
+				Finally, the last graph visualizes the distribution of weather event severity levels across each year. Remarkably, the distribution remains fairly consistent year-to-year, with "light" weather events being the most prevalent, while "moderate" and "severe" events exhibit relatively similar counts.
+			</p>
+			<figure class="center-figure">
+				<img src="images/StackedBarPlotOfWeatherEvents.png" alt="Graph displaying the severity distribution of weather events over the years" class="centered-image">
+				<figcaption>Graph portraying the severity distribution of weather events over the years</figcaption>
+			</figure>
+			
 			<br>
 			<h2>Storytelling</h2>
 			<p>
-
+				To assess whether weather conditions have changed since 2016, a thorough examination of the provided graphs is essential. The "Monthly Severity of Weather Events" graph reveals a notable fluctuation in the number of monthly weather events throughout the year. Remarkably, this pattern persists consistently each year. Additionally, the "Total Number of Weather Events per Year" graph depicts a declining trend in total annual weather events, commencing from 2019. Despite the gradual decline, a significant difference becomes apparent when scrutinizing the graph closely.
 			</p>
+			<p>
+				While these two graphs may suggest an improvement in weather conditions over time, a comprehensive analysis requires an examination of severe weather events. The "Number of Severe Weather Events per Year" graph displays a sharp and drastic increase in severe weather events between 2018 and 2019, followed by a gradual rise from 2019 to 2021, and a slight decline in 2022. This divergence indicates that although the total number of weather events has been decreasing since 2016, the frequency of severe weather events has actually increased. However, this alone does not necessarily imply worsening weather conditions.
+			</p>
+			<p>
+				To arrive at a more conclusive assessment, the stacked bar plot offers valuable insights. This graph illustrates that the number of light weather events remains significantly higher than other types, and it also highlights a growing proportion of severe weather events. In summary, while the overall number of weather events does not appear to be worsening, the proportion of severe weather events relative to other types is on the rise.
+			</p>			
 			<br>
 			<h2>Impact Section</h2>
 			<p>
-
-			</p>
+				My project has the potential to alleviate people's concerns about the increasing frequency of apocalyptic weather events. However, it does have several limitations. The project primarily focuses on the United States as a whole, which means that while it provides an overview of weather trends nationwide, it might not capture localized variations. Additionally, the dataset used is relatively small, spanning only seven years. When analyzing weather patterns, this timeframe is quite limited. While the data does suggest that weather conditions have remained stable or improved over this period, a more comprehensive dataset spanning a century or more might reveal a different, potentially more alarming, long-term trend of deteriorating weather conditions. Readers should consider these limitations when deciding whether to prepare for apocalyptic/worsening weather events in the years to come.			</p>
 			<br>
 			<h2>References</h2>
 			<p>
@@ -64,10 +106,11 @@
 			<br>
 			<h2>Code</h2>
 			<p>
-
+				Link to <a href="ITCS3162Project1.html">Code</a>
 			</p>
 		</main>
 	</body>
+	<br><br><br>
 	<footer>
 		<a href="https://github.com/Jvanstory">Github &nbsp; &nbsp;|&nbsp; &nbsp;</a>
 		<a href="https://jvanstory.github.io/">Github Webpage &nbsp; &nbsp;|&nbsp; &nbsp;</a>
