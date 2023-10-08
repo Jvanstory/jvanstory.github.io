@@ -32,21 +32,108 @@
 			<br>
 			<h2>Pre-Processing The Data</h2>
 			<p>
-
-            </p>
+				To commence the data preprocessing phase, I commenced by importing the dataset from a CSV file utilizing the Pandas library, facilitating subsequent data analysis and learning endeavors. Subsequently, I conducted a missing value assessment using the isnull().sum() method, affirming that the selected dataset exhibited no instances of missing values. Next, the dataset was partitioned into training, validation, and test subsets. Additionally, in the realm of text preprocessing, I executed the removal of stop words, which encompass frequently occurring English words such as "the" and "is," thereby contributing to the mitigation of noise within the data.            </p>
 			<br>
 			<h2>Data Understanding/Visualization</h2>
 			<p>
+				In the initial graph, we observe the distribution of spam and non-spam (ham) emails. It is evident that the number of non-spam emails significantly surpasses that of spam emails.
+			</p>
+			<figure class="center-figure">
+				<img src="images/NumOfEmails.png" alt="Number of spam and non-spam emails" class="centered-image">
+				<figcaption>Bar Graph Illustrating the Count of Spam and Ham Emails</figcaption>
+			</figure>
+			<p>
+				In the subsequent graph, we examine the average word count in spam and non-spam emails. Notably, spam emails exhibit a lower average word count. However, it's important to note that this representation might be misleading due to potential outliers, particularly exceptionally long emails. To attain a more comprehensive perspective, it is advisable to consider the median as well.
+			</p>
+			<figure class="center-figure">
+				<img src="images/AverageWordCount.png" alt="Average Word Count" class="centered-image">
+				<figcaption>Bar Graph Depicting the Average Word Count</figcaption>
+			</figure>
+			<p>
+				In the following graph, we present the average word count alongside the median for both spam and non-spam email categories. Notably, for both spam and non-spam emails, the median substantially deviates from the average word count, with spam emails exhibiting a more pronounced disparity between the two.
+			</p>
+			<figure class="center-figure">
+				<img src="images/MedianWordCount.png" alt="Median Word Count">
+				<figcaption>Bar Graph Displaying the Median and Average Word Count</figcaption>
+			</figure>
+			<p>
+				From the insights gleaned from these graphs, it becomes apparent that spam emails tend to have shorter content. Several plausible reasons may account for this phenomenon. It is conceivable that the individuals behind spam emails aim to maintain brevity to capture recipients' attention more effectively, evade detection mechanisms, or emphasize the importance of the malicious links or files they intend recipients to engage with.			</p>
+			<br>			
+			<h2>Modeling</h2>
+			<p>
+				I opted to employ two distinct models, namely the Naive Bayes Model and the Logistic Regression Model, for the purpose of spam email detection.
+			</p>
+			<p>
+				The Naive Bayes Model is a probabilistic classification algorithm that calculates the likelihood of a document belonging to a specific class. My rationale for selecting this model stems from the relatively modest size of the dataset I was working with, consisting of approximately 5,000 emails. Moreover, Naive Bayes is renowned for its simplicity, speed, and suitability for text classification tasks. Nevertheless, it is essential to acknowledge that Naive Bayes may struggle to capture intricate relationships between words.
+			</p>
+			<p>
+				On the other hand, the Logistic Regression Model is a linear classification algorithm that models the relationship between feature variables (i.e., the email's text) and binary targets (Spam or not-Spam). I chose to experiment with Logistic Regression due to its interpretability, particularly when dealing with a binary classification problem such as spam detection. Nonetheless, it is worth noting that Logistic Regression assumes a linear relationship, which may not always align with the underlying data distribution.
+			</p>
+			<br>
 
-            </p>
+			<h2>Evaluation</h2>
+			<p>
+				Both of the models delivered commendable performance. My evaluation strategy focused on key metrics including Accuracy, Precision, Recall, and F1 Score, chosen with the objective of obtaining a comprehensive understanding of each model's strengths and weaknesses. The table below presents the percentages associated with each evaluation metric.
+			</p>
+			<p>
+				Analyzing these values, it becomes apparent that Naive Bayes outperforms Logistic Regression in terms of Accuracy, Recall, and F1 Score. Notably, Logistic Regression exhibits a superior score in Precision.
+			</p>
+			<p>
+				It's worth noting that both models achieved high accuracy, suggesting their ability to correctly classify the majority of emails. However, given the substantial class imbalance with significantly more non-spam emails than spam emails, it's important to recognize that high accuracy can potentially be misleading. This is precisely why I incorporated Precision, which highlights that the Logistic Regression model is slightly better at avoiding false positives.
+			</p>
+			<p>
+				Recall, which measures the fraction of correctly predicted spam cases out of all actual spam cases, demonstrates that the Naive Bayes model excels in capturing a larger portion of actual spam emails.
+			</p>
+			<p>
+				The F1 Score, which harmonizes Precision and Recall, provides a balanced assessment of each model's overall performance. In this regard, Naive Bayes achieves a higher F1 Score, indicating its superior performance in terms of both precision and recall.
+			</p>
+			<p>
+				Taking all of these metrics into account, it is evident that the Naive Bayes model stands out as the superior choice for spam detection.
+			</p>
+			
+			<table>
+				<tr>
+					<th>Model</th>
+					<th>Accuracy</th>
+					<th>Precision</th>
+					<th>Recall</th>
+					<th>F1 Score</th>
+				</tr>
+				<tr>
+					<td> Naive Bayes</td>
+					<td>97.79</td>
+					<td>98.14</td>
+					<td>93.39</td>
+					<td>95.71</td>
+				</tr>
+				<tr>
+					<td>Logistic Regression</td>
+					<td>97.44</td>
+					<td>98.98</td>
+					<td>90.65</td>
+					<td>94.63</td>
+				</tr>
+			</table>
+			<br>
 			<h2>Storytelling</h2>
 			<p>
-
-            </p>	
+				Through my extensive work with this dataset and project, several key insights have emerged. I have observed that, on average, spam emails tend to exhibit shorter lengths. Additionally, a notable finding is the substantial disparity in numbers, with non-spam emails vastly outnumbering spam emails in this particular dataset, approaching a brobdingnagian ratio of nearly four non-spam emails for every spam email. It is imperative to acknowledge that this distribution may not be representative of all scenarios, and generalizing that random emails are more likely to be non-spam based solely on this dataset would be premature. However, what I can confidently assert is that, leveraging this dataset and the model I have developed, I am equipped to identify whether an email is spam or not based on its content. Furthermore, this project has underscored the critical importance of dataset size. While working with a dataset of approximately 5,000 emails may initially seem substantial, I am convinced that a larger dataset would have yielded even more robust and accurate results, while still maintaining a manageable level of complexity.	
+			</p>	
 			<br>
 			<h2>Impact Section</h2>
 			<p>
-                My project's significance lies in its potential to enhance email security by effectively shielding individuals from the perils of spam emails, which may contain malicious links or fraudulent schemes. However, it's essential to acknowledge the possible adverse consequences as well. If my model mistakenly misclassifies an email, there's a risk that a recipient might either trust a potentially hazardous message or disregard an essential one, underscoring the need for precision and reliability in email classification systems            <br>
+				The significance of my project lies in its potential to substantially bolster email security by effectively shielding individuals from the inherent dangers posed by spam emails, which often harbor malicious links, phishing attempts, or fraudulent schemes. This proactive approach serves as a critical defense against cyber threats and can safeguard users from compromising their personal information or falling victim to online scams.
+			</p>
+			<p>
+				However, it is imperative to acknowledge the potential adverse consequences that may arise from the application of email classification models like the one I've developed. If my model erroneously misclassifies an email, there exists a risk that a recipient may either place trust in a potentially hazardous message or disregard an essential and legitimate one. This underscores the pivotal importance of precision and reliability in the design and implementation of email classification systems.
+			</p>
+			<p>
+				Furthermore, it's worth noting that due to my use of a relatively smaller database, there may be certain limitations. Users should be aware that my model may not be as adept at identifying more sophisticated spam emails that closely resemble non-spam messages. While I maintain confidence in the model's overall effectiveness, I would encourage users to exercise their own discretion and judgment. My model should be viewed as a valuable tool, a supplementary layer of protection, rather than a sole reliance for email filtering.
+			</p>
+			<p>
+				Ultimately, the most robust defense against spam and potential threats will always reside in the user's knowledge, awareness, and common sense. No technology is infallible, and there's always a possibility of errors or misuse. Therefore, I emphasize the importance of user empowerment and education, urging individuals to remain vigilant and cautious when navigating their digital communications. Effective prevention of spam and online threats necessitates a combined effort of technology and user responsibility.
+			</p>
+			<br>
 			<h2>References</h2>
 			<p>
                 <a href="https://www.kaggle.com/datasets/jackksoncsie/spam-email-dataset">https://www.kaggle.com/datasets/jackksoncsie/spam-email-dataset</a>
@@ -54,7 +141,7 @@
 			<br>
 			<h2>Code</h2>
 			<p>
-
+				Link to <a href="ITCS3162Proejct2.html">Code</a>
             </p>
 		</main>
 	</body>
