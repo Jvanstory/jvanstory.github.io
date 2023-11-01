@@ -22,57 +22,80 @@
             <h1 class="pageTitle">Project 3: AMD Stock Price</h1>
             <h2>Introduce the Problem and dataset</h2>
                 <p>
-
-                </p>
+                    The objective of my project is to employ predictive analysis for the valuation of AMD's stock. AMD is a renowned corporation specializing in the production of computer components, such as GPUs, in a manner akin to Nvidia. The dataset I am utilizing is sourced from Kaggle and can be found at the following link: <a href="https://www.kaggle.com/datasets/aakashshinde1507/amd-stock-price-2005-2022?select=AMD-Stock-Price.csv">AMD Stock Price (2005-2022)</a>. This dataset encompasses a comprehensive array of information, comprising the daily stock price, high and low stock prices, total stock volume, and the percentage change in the stock price. In its entirety, the dataset encompasses seven columns and spans AMD stock prices from 2005 through 2023.                </p>
             
             <h2>What is regression and how does it work?</h2>
                 <p>
-
-                </p>
+                    Regression analysis is a statistical methodology designed to establish a mathematical connection between independent variables and a dependent variable. It examines the influence of variations in independent variables on the dependent variable. The process typically commences with data collection, followed by the selection of an appropriate regression model. Subsequently, this chosen model is employed to generate predictive outcomes.                </p>
             
             <h2>Experiment 1: Data Understanding</h2>
                 <p>
+                    Prior to embarking on the experimental phase, a comprehensive understanding of the dataset at hand is imperative. The dataset I am utilizing offers an extensive array of information for each recorded day. It encompasses multiple interrelated features, notably including the daily high and low prices of AMD stock. Presently, there are no discernible immediate patterns, likely owing to the inherent volatility of the technology market, particularly in the domain of computer components and semiconductor chips.
 
+                    As depicted in the graph below, a notable surge in the data is observable between 2020 and 2022, followed by a subsequent decline, and a recent resurgence.
                 </p>
+                <img src="/ITCS3162/images/AMDStockPrices.png" alt="AMDStockPrices">
+                <figcaption>AMD Stock Prices</figcaption>
             
             <h2>Experiment 1: Pre-processing</h2>
                 <p>
-
+                    Following a comprehensive data assessment, the next crucial step is to identify and eliminate any null values within the dataset and to split the dataset into training and testing sets. The primary features under consideration for my initial experiment are the historical stock prices, encompassing the daily high and low values, as well as the closing price for each recorded day. It is my current belief that there is no necessity to undertake data transformation or generate new features for the purposes of this analysis.
                 </p>
 
             <h2>Experiment 1: Modeling</h2>
                 <p>
-
+                    I developed a linear regression model aimed at forecasting AMD stock prices. To achieve this, I initially partitioned my dataset into separate training and test sets. Subsequently, I constructed the model and employed the Root Mean Square Error (RMSE) as a means to assess its performance.
                 </p>
 
             <h2>Experiment 1: Evaluation</h2>
                 <p>
+                    In assessing the performance of my model, I utilized the Root Mean Squared Error (RMSE). The resulting score, 3.850449097662994e-14, is remarkably close to zero, which, while initially appealing, raises concerns about its practicality. Achieving near-perfection in modeling seems improbable, as it may indicate overfitting to the provided dataset.
 
-                </p>
+                    Although my dataset was relatively extensive, comprising approximately 4500 days of stock price data, an RMSE score of such minuscule magnitude suggests the potential for suboptimal performance when applied to new, unseen data. In sum, while my model exhibits a highly promising and commendable score, it may signal a lack of generalizability to novel datasets.                </p>
 
             <h2>Experiment 2</h2>
                 <p>
+                    In my second experimental approach, I explored the application of the polynomial regression model. Polynomial regression, distinguished by its capacity to capture non-linear relationships in the data, stands as an alternative to the linear regression model. The rationale behind this choice was the belief that such a model could be better suited for predicting stock market dynamics, given its ability to handle non-linearity.
 
+                    I maintained the same set of features, encompassing high and low prices, along with the closing price. The resultant RMSE score for this model was 1.8177069102636918e-13, akin to the proximity to zero observed in the linear regression model. While initial expectations leaned towards the potential superiority of the polynomial regression model, it surprisingly produced an RMSE score very close to zero, akin to the linear regression model. This close proximity to zero raises suspicions regarding the model's practical utility and its potential for real-world application, as it might be overly optimistic.
                 </p>
 
             <h2>Experiment 3</h2>
                 <p>
-
+                    In my third experiment, I opted to persist with the polynomial regression model while introducing a modification by including the open price and the percentage change between each day as additional features within the model. The outcome was an RMSE score of 2.0571348560230297e-12, which, while still remarkably close to zero, exhibited a slight departure from zero when compared to the previous models. This divergence hints at the possibility that the incorporation of these two additional features may introduce challenges in terms of prediction accuracy within my model.
                 </p>
 
             <h2>Impact Section</h2>
                 <p>
+                    The potential impact of my project lies in its capacity to forecast stock market prices. This impact could manifest in various ways, both positive and negative. On one hand, accurate stock market predictions have the potential to greatly enhance an individual's wealth, offering substantial financial gains. On the other hand, such predictive models, if relied upon excessively, could yield adverse consequences for the broader economy and individual investors.
 
+                    It's crucial to acknowledge that while the model I've developed may exhibit promise, it is unlikely to create instant wealth. Overreliance on such models, particularly in making significant financial decisions, carries inherent risks. Placing unwavering faith in the model and investing large sums of money based solely on its predictions could result in catastrophic financial losses.
+                    
+                    This potential for loss stems from the inherent limitations of predictive models. Regardless of their sophistication, they cannot account for unforeseen events, such as sudden market crashes or unexpected controversies that can profoundly influence market dynamics. These unpredictable external factors can introduce volatility and uncertainty that even the most advanced models may not capture.
+                    
+                    In conclusion, while the predictive model holds potential, it is imperative to exercise caution and diversify investment strategies to mitigate risks. Investing solely based on the model's predictions can lead to financial vulnerability, and an understanding of the broader economic and market context remains essential for prudent decision-making.
                 </p>
 
             <h2>Conclusion</h2>
                 <p>
+                    Throughout this project, I acquired valuable insights into the realm of regression modeling, specifically focusing on two key techniques: linear and polynomial regression. Additionally, I gained a deeper appreciation for the significance of the dataset in the model development process.
+
+                    While I diligently partitioned my dataset into training and testing subsets, I recognize the potential benefits of using an entirely distinct dataset for testing purposes. This approach could provide a more robust assessment of the model's adaptability to random market fluctuations and variations.
                     
+                    The process of eliminating null values from the dataset notably contributed to enhancing my model's performance. This data preprocessing step was instrumental in ensuring data integrity and the model's effectiveness.
+                    
+                    Furthermore, I explored feature selection techniques to refine my model's accuracy. Initially, I limited my model to incorporate only the high and low prices and closing values for each day. This strategy yielded an improvement in model accuracy. Subsequently, the inclusion of additional features, such as the opening price and percentage change, led to a decrease in model performance.
+                    
+                    These findings underscore the iterative nature of model development and the need for careful feature selection and dataset considerations in the pursuit of improved predictive accuracy.
                 </p>
 
             <h2>References</h2>
+                <a href="https://www.kaggle.com/datasets/aakashshinde1507/amd-stock-price-2005-2022/">https://www.kaggle.com/datasets/aakashshinde1507/amd-stock-price-2005-2022/</a><br>
+                <a href="https://www.w3schools.com/python/python_ml_polynomial_regression.asp">https://www.w3schools.com/python/python_ml_polynomial_regression.asp</a><br>
+                <a href="https://chat.openai.com/share/2ed1279d-51cb-4b3c-a209-064f94e98491">https://chat.openai.com/share/2ed1279d-51cb-4b3c-a209-064f94e98491</a>
 
             <h2>Code</h2>
+                <p>Link to <a href="https://www.kaggle.com/code/joevanstory1/project3">Code</a></p>
 		</main>
 	</body>
 	<br><br><br>
