@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Personal Webpage || Joseph Vanstory</title>
+		<link rel="stylesheet" href="../styles/default.css">  
+		<link rel="stylesheet" href="styles/default.css">  
+	</head>
+	<body>
+		<header>
+			<div class="topnav">
+				<nav class="dropdown">
+					<button class="dropbtn">Menu</button>
+					<div class="dropdown-content">
+						<a href="../itis3135/">ITIS3135</a>
+						<a href="../aboutme.html">About Me</a>
+						<a href="../ITCS3162/">ITCS 3162</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<main class="container">
+			<h1 class="pageTitle">Final Project: Inflation</h1>
+			<h2>Introduction</h2>
+			<p>
+                Over time, the cost of goods and services has been on the upward trend, contributing to a continuous rise in inflation. This is a significant concern because, as prices escalate, an increasing number of individuals may find it challenging to afford essential items. In light of this, my project aims to develop a predictive model for the Consumer Price Index (CPI). The CPI serves as a crucial metric, representing the average change over time in the prices paid by urban consumers for a specified market basket of consumer goods. The objective is to enhance our understanding and prediction of how these price fluctuations impact the overall cost of living.
+            </p>
+			<br>
+
+            <h2>Introduce the data</h2>
+            <p>
+                I am utilizing the "U.S. Inflation Data" dataset sourced from Kaggle. This dataset consists of two key columns: one containing the year and month, and the other representing the Consumer Price Index (CPI). The CPI values provide the average measure of price changes for a specified market basket of consumer goods across all U.S. cities. Spanning from 1912 to 2021, this dataset offers a comprehensive historical perspective on inflation, allowing for a thorough analysis and modeling of the fluctuations in the cost of living over time.
+            </p>
+            <br>
+            <h2>Methods</h2>
+            <p>
+                The data preprocessing steps I implemented involved removing rows containing missing data and splitting the dataset into training and test sets. I opted for an 80-20 split, allocating 80% of the data for training and the remaining portion for testing. Given the simplicity of my dataset, minimal preprocessing was necessary.
+
+                Initially, I selected an ARIMA model for its suitability in analyzing and forecasting time series data. However, due to unsatisfactory results, I decided to explore an alternative model. Subsequently, I adopted the naive forecast model, which produced significantly improved outcomes. I chose this model for its simplicity, ease of understanding, and effectiveness when dealing with data closely related in value to the previous observations. Considering the relatively gradual changes in the Consumer Price Index (CPI) on a daily basis, I deemed the naive forecast model a fitting choice.
+            </p>
+            <br>
+
+			<h2>Evaluation</h2>
+            <p>
+                I observed subpar performance from the ARIMA model, evidenced by the lackluster scores relative to the nature of the predictive task. The corresponding evaluation metrics are as follows:
+
+                <table>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                  </tr>
+                  <tr>
+                    <td>Mean Squared Error on Testing Data</td>
+                    <td>29.348618040838094</td>
+                  </tr>
+                  <tr>
+                    <td>Mean Absolute Error on Testing Data</td>
+                    <td>3.9085522060265827</td>
+                  </tr>
+                  <tr>
+                    <td>Root Mean Squared Error on Testing Data</td>
+                    <td>5.417436482399964</td>
+                  </tr>
+                </table>
+                In contrast, the Naive model demonstrated more promising outcomes, featuring significantly lower scores and, consequently, more accurate predictions:
+                
+                <table>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Value</th>
+                  </tr>
+                  <tr>
+                    <td>Naive Forecast - Mean Squared Error</td>
+                    <td>0.8343789192307686</td>
+                  </tr>
+                  <tr>
+                    <td>Naive Forecast - Mean Absolute Error</td>
+                    <td>0.7080961538461532</td>
+                  </tr>
+                  <tr>
+                    <td>Naive Forecast - Root Mean Squared Error</td>
+                    <td>0.9134434406304358</td>
+                  </tr>
+                </table>
+            </p>
+		    <br>	
+
+			<h2>Storytelling and Conclusion</h2>
+			<p>
+                The project underscored the importance of adopting a comprehensive approach to performance evaluation. This realization surfaced when I initially encountered a seemingly flawless alignment between the graph of my ARIMA model and the actual CPI values. Although this alignment suggested accurate predictions, it raised concerns, especially in light of the subpar performance scores. I began suspecting that the ARIMA model might be overfitting the data, struggling with generalization to new or unseen data. This suspicion prompted me to explore the Naive model, which, in contrast, yielded more favorable results.
+
+                Throughout this course, a pivotal lesson emerged—emphasizing the significance of thoroughly understanding the intricacies of the data under consideration. This knowledge is essential for crafting detailed and accurate models. Furthermore, the experience underscored the critical importance of identifying the limitations of models and not relying on them blindly, especially when faced with scenarios where their performance may falter.            </p>
+            <img src="/images/modelData.png" alt="Model">
+            <img src="/images/completeData.png" alt="Complete">
+            <figcaption>Raw data</figcaption>
+            <img src="/images/CombinedValues.png" alt="CombinedValues">
+            <img src="/images/NaiveForecast.png" alt="Naive">
+			<br>
+
+			<h2>Impact Section</h2>
+			<p>
+                The potential impacts of my model are twofold, encompassing both positive and negative aspects. On the positive side, having the ability to anticipate and plan for inflationary changes would be immensely beneficial. Individuals could strategically manage their finances, mitigating the risk of financial distress. However, while the idea of relying on such a model seems promising, there is an inherent risk. Regardless of the model's accuracy, unforeseen events or inaccuracies could lead to undesirable outcomes. Depending on this model for life planning carries the potential for financial hardship if the predictions prove incorrect.
+            </p>
+			<br>
+
+			<h2>Code/References</h2>
+			<p>
+                <a href="https://chat.openai.com/share/6ff162f5-9d55-4ff4-9765-bd2399534a8a">ChatGPT</a>
+                <a href="https://www.kaggle.com/joevanstory1/finalproject">Code</a>
+            </p>
+		</main>
+	</body>
+	<br><br><br>
+	<footer>
+		<a href="https://github.com/Jvanstory">Github &nbsp; &nbsp;|&nbsp; &nbsp;</a>
+		<a href="https://jvanstory.github.io/">Github Webpage &nbsp; &nbsp;|&nbsp; &nbsp;</a>
+		<a href="https://www.linkedin.com/in/joe-vanstory-095193240/">Linkedin &nbsp; &nbsp;</a>
+	</footer>
+</html>
