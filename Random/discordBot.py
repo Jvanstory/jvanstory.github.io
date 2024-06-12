@@ -3,7 +3,7 @@ from discord.ext import commands
 import asyncio
 
 # Your Discord bot token
-TOKEN = 'MTIzNjAwMjk4ODc0MTM2MTc0Ng.GqJg8q.ZrbG3YQPQkBGLmZLE-tGVpjSmojnjvgmsIuhmk'
+TOKEN = ''
 
 # Prefix for bot commands
 PREFIX = '!'
