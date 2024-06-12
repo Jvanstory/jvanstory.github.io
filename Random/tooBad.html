@@ -17,12 +17,13 @@
             overflow: hidden;
         }
         h1 {
-            font-size: calc(10vw + 10vh);
+            font-size: calc(5vw + 5vh); /* Base font size */
             margin: 0;
             color: transparent;
             position: relative;
             display: inline-block;
             overflow: hidden;
+            text-align: center;
         }
         h1::before {
             content: "Too Bad";
@@ -37,7 +38,6 @@
             color: transparent;
             animation: wipe-in-top-right 2.5s cubic-bezier(.25, 1, .30, 1) both;
             animation-delay: 2s;
-
         }
         @keyframes wipe-in-top-right {
             from {
@@ -45,6 +45,18 @@
             }
             to {
                 clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+            }
+        }
+
+        /* Adjust font size for different screen sizes */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: calc(8vw + 8vh);
+            }
+        }
+        @media screen and (min-width: 601px) {
+            h1 {
+                font-size: calc(6vw + 6vh);
             }
         }
     </style>
