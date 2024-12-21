@@ -1,0 +1,24 @@
+nav {
+    background-color: #333; /* Dark background color */
+    padding: 1rem; /* Padding around the nav */
+    text-align: center; /* Center the text */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other content */
+  }
+  
+  nav a {
+    color: #ccc; /* Light text color */
+    margin: 0 1rem; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2rem; /* Increase font size */
+    padding: 0.5rem 1rem; /* Padding around each link */
+    background-color: #333; /* Match the nav background color */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  nav a:hover {
+    background-color: #444; /* Slightly lighter background color on hover */
+    color: #fff; /* White color on hover */
+  }

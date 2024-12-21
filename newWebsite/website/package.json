@@ -8,13 +8,16 @@
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.0.2",
     "react-scripts": "5.0.1",
-    "react-ui-animate": "^4.2.0"
+    "react-ui-animate": "^4.2.0",
+    "gh-pages": "^6.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +44,11 @@
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
     "web-vitals": "^2.1.4"
-  }
+  },
+  "homepage": "https://jvanstory.github.io/<repository-name>",
+  "scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+
 }

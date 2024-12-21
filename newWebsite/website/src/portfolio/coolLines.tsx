@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import '../App.css';
+import Navbar from '../Navbar/Navbar';
 
 const CanvasComponent: React.FC = () => {
   const [lineCoordinates, setLineCoordinates] = useState<{ x: number; y: number } | null>(null);
   const [radius, setRadius] = useState(0.2); // Circle radius as a percentage of the smaller dimension
-  const [lineColor, setLineColor] = useState('darkblue'); // Line color
-  const [backgroundColor, setBackgroundColor] = useState('white'); // Background color
-  const [circleColor, setCircleColor] = useState('gray'); // Circle background color
+  const [lineColor, setLineColor] = useState('cyan'); // Line color
+  const [backgroundColor, setBackgroundColor] = useState('gray'); // Background color
+  const [circleColor, setCircleColor] = useState('black'); // Circle background color
   const numLines = 48; // Number of lines to draw evenly spaced
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -86,60 +86,58 @@ const CanvasComponent: React.FC = () => {
   }, [radius, lineColor, backgroundColor, circleColor]);
 
   return (
-    <div style={{ margin: 0, padding: 0, overflow: 'hidden', height: '100vh', width: '100vw' }}>
-      <canvas
-        ref={canvasRef}
-        style={{
-          display: 'block',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          zIndex: -1, // Ensure the canvas is behind the navbar
-          width: '100%',
-          height: '100%',
-        }}
-      />
-      <div style={{ position: 'absolute', top: 10, left: 10, zIndex: 10 }}>
-        <label style={{ color: 'white', textShadow: '1px 1px 2px black' }}>
-          Circle Radius (%):
-          <input
-            type="range"
-            min="0.1"
-            max="0.5"
-            step="0.01"
-            value={radius}
-            onChange={(e) => setRadius(parseFloat(e.target.value))}
-          />
-        </label>
-        <label style={{ color: 'white', textShadow: '1px 1px 2px black' }}>
-          Line Color:
-          <input
-            type="color"
-            value={lineColor}
-            onChange={(e) => setLineColor(e.target.value)}
-          />
-        </label>
-        <label style={{ color: 'white', textShadow: '1px 1px 2px black' }}>
-          Background Color:
-          <input
-            type="color"
-            value={backgroundColor}
-            onChange={(e) => setBackgroundColor(e.target.value)}
-          />
-        </label>
-        <label style={{ color: 'white', textShadow: '1px 1px 2px black' }}>
-          Circle Color:
-          <input
-            type="color"
-            value={circleColor}
-            onChange={(e) => setCircleColor(e.target.value)}
-          />
-        </label>
-      </div>
-      <div style={{ position: 'absolute', top: 10, right: 10, zIndex: 10 }}>
-        <button style={{ padding: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px' }}>
-          <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
-        </button>
+    <div>
+      <Navbar />
+      <div style={{ margin: 0, padding: 0, overflow: 'hidden', height: '100vh', width: '100vw', paddingTop: '60px' }}>
+        <canvas
+          ref={canvasRef}
+          style={{
+            display: 'block',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: -1, // Ensure the canvas is behind the navbar
+            width: '100%',
+            height: '100%',
+          }}
+        />
+        <div style={{ position: 'absolute', top: 70, left: 10, zIndex: 10 }}>
+          <label style={{ color: 'white', textShadow: '1px 1px 2px black' }}>
+            Circle Radius (%):
+            <input
+              type="range"
+              min="0.1"
+              max="0.5"
+              step="0.01"
+              value={radius}
+              onChange={(e) => setRadius(parseFloat(e.target.value))}
+            />
+          </label>
+          <label style={{ color: 'white', textShadow: '1px 1px 2px black' }}>
+            Line Color:
+            <input
+              type="color"
+              value={lineColor}
+              onChange={(e) => setLineColor(e.target.value)}
+            />
+          </label>
+          <label style={{ color: 'white', textShadow: '1px 1px 2px black' }}>
+            Background Color:
+            <input
+              type="color"
+              value={backgroundColor}
+              onChange={(e) => setBackgroundColor(e.target.value)}
+            />
+          </label>
+          <label style={{ color: 'white', textShadow: '1px 1px 2px black' }}>
+            Circle Color:
+            <input
+              type="color"
+              value={circleColor}
+              onChange={(e) => setCircleColor(e.target.value)}
+            />
+          </label>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,39 @@
+body, html {
+    overflow-y: auto;
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #resume-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Vertically centers the content */
+    
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 300%;
+    margin: 1rem;
+    color: black;
+  }
+  
+  .resume-link {
+    display: inline-block;  /* Ensure the link takes only the width of the image */
+  }
+  
+  .resume-image {
+    width: 50%; /* Set the image width to 50% of the parent */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Ensure the image is centered */
+  }
+  
+  a {
+    display: inline-block; /* Makes the anchor only as wide as its content (the image) */
+    text-decoration: none; /* Removes underline, optional */
+    width: auto; /* Ensure no width is applied to the link */
+  }
+  
