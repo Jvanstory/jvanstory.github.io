@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Jvanstory/static/css/main.b704439f.css",
-    "main.js": "/Jvanstory/static/js/main.c4cac9a6.js",
-    "index.html": "/Jvanstory/index.html",
-    "main.b704439f.css.map": "/Jvanstory/static/css/main.b704439f.css.map",
-    "main.c4cac9a6.js.map": "/Jvanstory/static/js/main.c4cac9a6.js.map"
+    "main.css": "/static/css/main.b704439f.css",
+    "main.js": "/static/js/main.c4cac9a6.js",
+    "index.html": "/index.html",
+    "main.b704439f.css.map": "/static/css/main.b704439f.css.map",
+    "main.c4cac9a6.js.map": "/static/js/main.c4cac9a6.js.map"
   },
   "entrypoints": [
     "static/css/main.b704439f.css",
