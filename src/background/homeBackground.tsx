@@ -10,18 +10,19 @@ const HomeBackground: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 800);
       if (canvasRef.current) {
         const canvas = canvasRef.current;
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
       }
-      setIsSmallScreen(window.innerWidth < 800);
     };
 
     handleResize();
     window.addEventListener('resize', handleResize);
 
     const handleMouseMove = (event: MouseEvent) => {
+      if (isSmallScreen) return;
       const canvas = canvasRef.current;
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
@@ -64,13 +65,15 @@ const HomeBackground: React.FC = () => {
       }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    if (!isSmallScreen) {
+      window.addEventListener('mousemove', handleMouseMove);
+    }
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isSmallScreen]);
 
   const radius = Math.min(window.innerWidth, window.innerHeight) * 0.35; // Circle radius
   const linkOffset = 50; // Space between links and the circle
@@ -79,16 +82,18 @@ const HomeBackground: React.FC = () => {
 
   return (
     <div className={`container ${isSmallScreen ? 'small-screen' : ''}`} style={{ position: 'relative', width: '100vw', height: '100vh' }}>
-      <canvas
-        ref={canvasRef}
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'block',
-          position: 'absolute',
-          zIndex: -1,
-        }}
-      />
+      {!isSmallScreen && (
+        <canvas
+          ref={canvasRef}
+          style={{
+            width: '100%',
+            height: '100%',
+            display: 'block',
+            position: 'absolute',
+            zIndex: -1,
+          }}
+        />
+      )}
       {links.map((link, index) => {
         const angle = (index * 2 * Math.PI) / links.length;
         const radius = Math.min(window.innerWidth, window.innerHeight) * 0.34; 
