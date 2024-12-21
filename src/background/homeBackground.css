@@ -1,18 +1,65 @@
 .link {
-    position: absolute;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #FCF7F8;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #624CAB;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(5, 5, 5, 5);
+  transition: all 0.3s;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.link:hover {
+  background-color: lightblue;
+  color: darkblue;
+  text-shadow: 0px 0px 0 #000, 0px 0px 0 #000, 0px 0px 0 #000, 0px 0px 0 #000;
+}
+
+.message {
+  visibility: hidden;
+}
+
+.link-small {
+  position: static;
+  display: block;
+  margin: 10px auto; /* Center the links horizontally */
+  text-align: center;
+  width: calc(100% - 20px); /* Ensure the links do not run off the page */
+  max-width: 300px; /* Optional: Set a max width for the links */
+}
+
+.homeP{
+  visibility: hidden;
+}
+
+@media (max-width: 800px) {
+  .link {
+    position: static;
+    display: block;
+    margin: 10px auto; /* Center the links horizontally */
+    text-align: center;
+    width: calc(100% - 20px); /* Ensure the links do not run off the page */
+    max-width: 450px; /* Optional: Set a max width for the links */
+    height: 14%;
+    font-size: 6vw;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-left: 50%;
+    padding-top: 5%;
+  }
+
+  .homeP{
+    visibility: visible;
     transform: translate(-50%, -50%);
-    color: #FCF7F8;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #624CAB;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(5, 5, 5, 5);
-    transition: all 0.3s;
+
   }
-  
-  .link:hover {
-    background-color: lightblue;
-    color: darkblue;
-  }
-  
+}

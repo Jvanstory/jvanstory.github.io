@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const Navbar: React.FC = () => {
   return (
-    <nav>
+    <nav className='navbar'>
       <Link to="/">Home</Link>
       <Link to="/cool-lines">Cool Lines</Link>
       <Link to="/Resume">Resume</Link>

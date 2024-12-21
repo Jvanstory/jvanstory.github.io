@@ -22,3 +22,9 @@ nav {
     background-color: #444; /* Slightly lighter background color on hover */
     color: #fff; /* White color on hover */
   }
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }

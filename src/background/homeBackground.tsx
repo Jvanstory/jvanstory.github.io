@@ -6,6 +6,7 @@ const HomeBackground: React.FC = () => {
   const [lineCoordinates, setLineCoordinates] = useState<{ x: number; y: number } | null>(null);
   const numLines = 48;
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 800);
 
   useEffect(() => {
     const handleResize = () => {
@@ -14,6 +15,7 @@ const HomeBackground: React.FC = () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
       }
+      setIsSmallScreen(window.innerWidth < 800);
     };
 
     handleResize();
@@ -71,44 +73,43 @@ const HomeBackground: React.FC = () => {
   }, []);
 
   const radius = Math.min(window.innerWidth, window.innerHeight) * 0.35; // Circle radius
-const linkOffset = 50; // Space between links and the circle
+  const linkOffset = 50; // Space between links and the circle
 
-const links = ['About', 'Cool-Lines', 'Old Website', 'Contact', 'Resume']; // Add the old website link
+  const links = ['About', 'Cool-Lines', 'Old Website', 'Contact', 'Resume']; // Add the old website link
 
-return (
-  <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
-    <canvas
-      ref={canvasRef}
-      style={{
-        width: '100%',
-        height: '100%',
-        display: 'block',
-        position: 'absolute',
-        zIndex: -1,
-      }}
-    />
-    {links.map((link, index) => {
-      const angle = (index * 2 * Math.PI) / links.length;
-      const radius = Math.min(window.innerWidth, window.innerHeight) * 0.34; 
-      const linkOffset = 70; // Offset from the circle
-      const x = window.innerWidth / 2 + Math.cos(angle) * (radius + linkOffset) - 15;
-      const y = window.innerHeight / 2 + Math.sin(angle) * (radius + linkOffset) + 5;
+  return (
+    <div className={`container ${isSmallScreen ? 'small-screen' : ''}`} style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+      <canvas
+        ref={canvasRef}
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'block',
+          position: 'absolute',
+          zIndex: -1,
+        }}
+      />
+      {links.map((link, index) => {
+        const angle = (index * 2 * Math.PI) / links.length;
+        const radius = Math.min(window.innerWidth, window.innerHeight) * 0.34; 
+        const linkOffset = 70; // Offset from the circle
+        const x = window.innerWidth / 2 + Math.cos(angle) * (radius + linkOffset) - 15;
+        const y = window.innerHeight / 2 + Math.sin(angle) * (radius + linkOffset) + 5;
 
-      return (
-        <Link
-          key={index}
-          to={link === 'Old Website' ? '/oldWebsite' : `/${link.toLowerCase()}`}
-          className="link"
-          style={{ left: `${x}px`, top: `${y}px`, textShadow:'1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }} // Inline styles for dynamic positioning
-        >
-          {link}
-        </Link>
-
-      );
-    })}
-  </div>
-);
-
+        return (
+          <Link
+            key={index}
+            to={link === 'Old Website' ? '/oldWebsite' : `/${link.toLowerCase()}`}
+            className={`link ${isSmallScreen ? 'link-small' : ''}`}
+            style={isSmallScreen ? {} : { left: `${x}px`, top: `${y}px` }} // Inline styles for dynamic positioning
+          >
+            {link}
+          </Link>
+        );
+      })}
+      <p className='homeP'>For the best experience, view on a computer</p>
+    </div>
+  );
 };
 
 export default HomeBackground;

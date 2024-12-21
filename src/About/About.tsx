@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './About.css';
 import Navbar from '../Navbar/Navbar';
 
 const About: React.FC = () => {
+  useEffect(() => {
+    const updateNavbarHeight = () => {
+      const navbar = document.querySelector('.navbar');
+      if (navbar) {
+        const navbarHeight = navbar.clientHeight;
+        document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+      }
+    };
+
+    updateNavbarHeight();
+    window.addEventListener('resize', updateNavbarHeight);
+
+    return () => {
+      window.removeEventListener('resize', updateNavbarHeight);
+    };
+  }, []);
+
   return (
     <div id="about-me">
-      <Navbar></Navbar>
-      <h1>About This Website</h1>
+      <Navbar />
+      <h1 id="about-block">About This Website</h1>
       <div id="about-content">
         <div className="about-text">
           <p>
