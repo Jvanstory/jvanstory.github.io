@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles/default.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ITIS 3135 || Joseph Vanstory's Jittery Vulture || Forms</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav id="siteLinks"></nav>
+            <br><nav id="secondLinks"></nav>
+            <h1>ITIS 3135 || Joseph Vanstory's Jittery Vulture</h1>
+        </header>
+        
+        <main>
+            <h2>HTML Forms</h2>
+            <form action="#">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" size="30" placeholder="John Doe" required><br>
+                <label for="pnumber">Phone Number:</label><br>
+                <input type="number" id="pnumber" name="number" placeholder="1234567890"><br>
+                <label for="email">Email</label><br>
+                <input type="text" name="email" id="email" size="50" placeholder="example@gmail.com" required><br>
+                <fieldset>
+                    <label>Favorite Animal</label><br>
+                    <input class='checkbox' type="checkbox" name="cat" id="cat"><label for="cat">Cat</label>
+                    <input type="checkbox" name="dog" id="dog"><label for="dog">Dog</label>
+                    <input type="checkbox" name="fish" id="fish"><label for="fish">fish</label>
+                </fieldset>
+                <fieldset>
+                    <label for="scooby">Favorite Scooby Doo Character</label><br>
+                    <input type="radio" name="scooby" id="fred"><label for="fred">Fred</label><br>
+                    <input type="radio" name="scooby" id="daphne"><label for="daphne">Daphne</label><br>
+                    <input type="radio" name="scooby" id="velma"><label for="velma">Velma</label><br>
+                    <input type="radio" name="scooby" id="shaggy"><label for="shaggy">Shaggy</label><br>
+                    <input type="radio" name="scooby" id="scooby"><label for="scooby">Scooby-Doo</label><br>
+                </fieldset>
+                <label for="color">Favorite Color</label>
+                <select name="color" id="color">
+                    <option value="blue">Blue</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="green">Green</option>
+                    <option value="purple">Purple</option>
+                    <option value="red">Red</option>
+                </select>
+                <br>
+                <button class="button" type="reset">Reset</button>
+                <button class="button" type="submit">Submit</button>
+            </form>
+
+        </main>
+        <footer id="footer"></footer>
+            <script src="scripts/defaultscripts.js"></script>
+            <script src="/private_html/itis3135/scripts/defaultscripts.js"></script>
+    </body>
+</html>

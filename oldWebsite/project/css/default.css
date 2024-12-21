@@ -1,0 +1,104 @@
+html{
+  min-height: 100%;
+  background: linear-gradient(pink 0%, rgb(241, 109, 241) 50%, white 100%);
+}
+body{
+  height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: purple;
+}
+
+nav{
+    text-decoration: none;
+    color: gray;
+}
+
+h1{
+    font-size: 75px;
+    text-align: center;
+}
+
+#center {
+    padding-left: 15%;
+}
+
+/* h3{
+    font-size: 30px;
+} */
+
+img{
+    max-height: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption{
+    text-align: center;
+}
+
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {
+      opacity: .4
+    } 
+    to {
+      opacity: 1
+    }
+  }
+
+  p{
+    padding-left: 10px;
+  }
+
+  .ui-widget-content {
+    background-color: rgb(32, 31, 31);
+    color: whitesmoke;
+    background: none;
+  }
+
+  .ui-accordion .ui-accordion-header {
+    background-color: rgb(32, 31, 31);
+    color: whitesmoke;
+  }
+
+  .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: black;
+  }
+
+  .ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: black;
+  }
+
+  #topbar{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background: black;
+  }
+
+.typed-cursor{
+  opacity: 0;
+}

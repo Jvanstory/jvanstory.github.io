@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/default.css">    
+    <title>ITIS 3135 || Joseph Vanstory's Jittery Vulture || Arrays</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="siteLinks"></nav>
+        <br><nav id="secondLinks"></nav>
+        <h1>ITIS 3135 || Joseph Vanstory's Jittery Vulture</h1>
+    </header>
+    <main>
+        <select id="dropdown">
+            <option value="">Fred</option>
+            <option value="">Shaggy</option>
+            <option value="">Velma</option>
+            <option value="">Daphne</option>
+            <option value="">Scooby</option>
+        </select>
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <br>
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary">
+            <br>
+            <button id="addSalary" onclick="addSalary();" value="Add Salary">Add Salary</button>
+        <br>
+        <table id="results_table">
+            <tr>
+                <td>Name</td>
+                <td>Salary</td>
+            </tr>
+            <tr>
+                <th id="person_Table"></th>
+                <th id="salary_Table"></th>
+              </tr>
+        </table>
+        <button id="displaySalary" onclick="displaySalary();" value="Display Salary">Display Salary</button>
+        <div id="results">
+
+        </div>
+        <button id="displayResults" onclick="displayResults();" value="Display Results">Display Results</button>
+    </main>
+    <footer id="footer"></footer>
+    
+    <script src="scripts/defaultscripts.js"></script>
+    <script src="/private_html/itis3135/scripts/defaultscripts.js"></script>
+    <script src="scripts/arrays.js"></script>
+
+</body>
+</html>

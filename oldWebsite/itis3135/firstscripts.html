@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles/default.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <title>ITIS 3135 || Joseph Vanstory's Jittery Vulture || First Scripts</title>
+    </head>
+    <body>
+        <header>
+            <nav id="siteLinks"></nav>
+            <br><nav id="secondLinks"></nav>
+            <h1>ITIS 3135 || Joseph Vanstory's Jittery Vulture</h1>
+        </header>
+        <main>
+            <h3 id="date"></h3> 
+            <input type="text" placeholder="Enter Name" id="fullName">
+            <input type="text" placeholder="Enter mood" id="mood">
+            <button type="button" onclick="greeting();">Welcome</button>
+            <p id="greet" class="greet"></p>
+            <h3>Vulture Adder:</h3>
+            <input type="text" placeholder="Enter Number" id="addinput1">
+            <input type="text" placeholder="Enter Number" id="addinput2">
+            <button type="button" onclick="addition();">ADD</button>
+            <p id="sum" class="sum"></p>
+            <h3>Vulture Subtraction: </h3>
+            <input type="text" placeholder="Enter Number" id="subinput1">
+            <input type="text" placeholder="Enter Number" id="subinput2">
+            <button type="button" onclick="subtraction();">Subtract</button>
+            <p id="subsum" class="subsum"></p>
+            <h3>Vulture Multiplication</h3>
+            <input type="text" placeholder="Enter Number" id="multinput1">
+            <input type="text" placeholder="Enter Number" id="multinput2">
+            <button type="button" onclick="multiplication();">Multiplication</button>
+            <p id="multsum" class="multsum"></p>
+            <h3>Vulture Division</h3>
+            <input type="text" placeholder="Enter Number" id="divinput1">
+            <input type="text" placeholder="Enter Number" id="divinput2">
+            <button type="button" onclick="division();">Division</button>
+            <p id="divsum" class="divsum"></p>
+            <h3>Calculate 7% Vulture Tax</h3>
+            <input type="text" placeholder="Enter Number" id="taxinput1">
+            <button type="button" onclick="tax();">Calulate Tax</button>
+            <p id="tax" class="tax"></p>
+        </main>
+        <footer id="footer"></footer>
+        <script src="scripts/defaultscripts.js"></script>
+        <script src="defaultscripts.js"></script>
+</body>
+</html>

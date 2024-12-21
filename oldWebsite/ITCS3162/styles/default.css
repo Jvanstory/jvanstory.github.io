@@ -1,0 +1,103 @@
+/* Default styles for the container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Default styles for paragraphs, headings, and links */
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+ 
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(119, 17, 235); /* Purple color */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #8b74b1; /* Purple color for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(185, 181, 255); /* Light purple color for odd rows */
+}
+
+tr:nth-child(1) {
+    background-color: rgb(107, 107, 255); /* Darker purple color for the first row */
+}
+
+  /* Responsive padding adjustments */
+  @media screen and (max-width: 600px) {
+    /* Adjust padding for screens up to 600px wide */
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Adjust padding for screens between 601px and 1024px wide */
+    .container {
+      padding: 15px;
+    }
+  }
+  
+  @media screen and (min-width: 1025px) {
+    /* Default padding for screens wider than 1024px */
+    .container {
+      padding: 20px;
+    }
+  }
+  
+  /* Container for centered content */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+  }
+  
+  /* Style for the image */
+  /* Style for the image */
+.centered-image {
+    max-width: 100%; /* Ensure the image does not exceed its container's width */
+    max-height: 100%; /* Ensure the image does not exceed its container's height */
+    width: auto; /* Allow the image's width to adjust proportionally */
+    height: auto; /* Allow the image's height to adjust proportionally */
+  }
+  
+  /* Add this class to your <figure> elements */
+  .center-figure {
+    text-align: center; /* Center the content horizontally */
+    margin: 0 auto; /* Center the content horizontally within the figure */
+  }
+  
+  .pageTitle{
+    text-align: center;
+  }

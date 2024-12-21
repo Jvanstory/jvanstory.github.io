@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Key Entering Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <div class="container">
+            <h1>Minigame inspired by Helldivers 2</h1>
+            <div id="game-screen">
+            <div id="arrow"></div>
+            <div id="arrow-container"></div>
+            <div id="instructions">Press the corresponding WASD key</div>
+            <div>Score: <span id="score">0</span></div>
+            <div>High Score: <span id="highScore">0</span></div>
+            <div>Time: <span id="timer">0.000</span> seconds</div>
+            </div>
+            
+            <div class="controls">
+            <select id="num-arrows-select">
+                <option value="3">3 Arrows</option>
+                <option value="5">5 Arrows</option>
+                <option value="7">7 Arrows</option>
+            </select>
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="stopTimer()">Stop</button>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-overlay">
+            <div class="modal-content" id="modal-content"></div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+<footer class="footer">
+    <a href="https://github.com/Jvanstory">Github &nbsp; &nbsp;|&nbsp; &nbsp;</a>
+	<a href="https://jvanstory.github.io/">Github Webpage &nbsp; &nbsp;|&nbsp; &nbsp;</a>
+	<a href="https://www.linkedin.com/in/joe-vanstory-095193240/">Linkedin &nbsp; &nbsp;</a>
+    <p id="bottomText">work in progress</p>
+</footer>
+</html>
+
+<!-- TODO
+Create more game modes:
+timed game mode
+think of more
+
+Make it look good
+add custom or better looking arrows
+make the highligh look better than just yellow background
+-->

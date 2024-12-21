@@ -1,0 +1,170 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Roboto&family=Roboto+Condensed&family=Source+Sans+Pro&display=swap');
+
+/* Global Styles */
+body {
+    background-color: #222629;
+    color: white;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    padding: 0 10vh; /* Added padding to the sides */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Table Styling */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    width: 100%;
+    max-width: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #8b74b1;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(185, 181, 255);
+}
+
+tr:nth-child(1) {
+    background-color: rgb(107, 107, 255);
+}
+
+/* Buttons */
+.button {
+    background-color: #7F636E;
+    color: #CAC4CE;
+}
+
+/* Select Styles */
+select:active, select:hover {
+    outline-color: red;
+    color: red;
+}
+
+/* Labels */
+label {
+    color: #61892f;
+}
+
+/* Button Styles */
+button {
+    color: black;
+    background-color: gray;
+    border-color: white;
+}
+
+/* Anchor Styles */
+a {
+    color: rgb(70, 141, 0);
+    font-family: 'arial';
+    text-decoration: none;
+}
+
+/* Placeholder Styles */
+::placeholder {
+    color: #8b74b1;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Checkbox Styles */
+input[type='checkbox'] {
+    accent-color: red;
+}
+
+/* Dropdown Styles */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-weight: 100;
+    text-shadow: 0 0 0px black, 0 0 0px black, 0 0 0px black, 0 0 0px black;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 8px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Grid Styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+/* Slide Image Styles */
+.slideimage {
+    max-width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    width: 50px;
+    height: 50px;
+}
+
+/* Indentation Styles */
+.indent {
+    text-indent: 2%;
+}
+
+.doubleindent {
+    padding-left: 8%;
+}
+
+/* Figure Image Styles */
+.figimage {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: auto;
+}
+
+/* Screenshot Styles */
+.screenshot {
+    max-width: 100%;
+    height: auto;
+}

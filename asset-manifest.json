@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Jvanstory/jvanstory.github.io/static/css/main.b704439f.css",
+    "main.js": "/Jvanstory/jvanstory.github.io/static/js/main.c4cac9a6.js",
+    "index.html": "/Jvanstory/jvanstory.github.io/index.html",
+    "main.b704439f.css.map": "/Jvanstory/jvanstory.github.io/static/css/main.b704439f.css.map",
+    "main.c4cac9a6.js.map": "/Jvanstory/jvanstory.github.io/static/js/main.c4cac9a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b704439f.css",
+    "static/js/main.c4cac9a6.js"
+  ]
+}
