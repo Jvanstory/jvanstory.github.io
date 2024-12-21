@@ -99,7 +99,7 @@ return (
           key={index}
           to={link === 'Old Website' ? '/oldWebsite' : `/${link.toLowerCase()}`}
           className="link"
-          style={{ left: `${x}px`, top: `${y}px` }} // Inline styles for dynamic positioning
+          style={{ left: `${x}px`, top: `${y}px`, textShadow:'1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000' }} // Inline styles for dynamic positioning
         >
           {link}
         </Link>
