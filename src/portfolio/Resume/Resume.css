@@ -2,7 +2,7 @@ body, html {
     overflow-y: auto;
     max-height: 100vh;
     margin: 0;
-    padding: 0;
+    padding-top: 3%;
   }
   
   #resume-container {
