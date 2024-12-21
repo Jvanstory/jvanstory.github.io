@@ -2,7 +2,7 @@ body, html {
     overflow-y: auto;
     max-height: 100vh;
     margin: 0;
-    padding-top: 3%;
+    
   }
   
   #resume-container {
@@ -14,6 +14,11 @@ body, html {
     text-align: center;
   }
   
+  .resume{
+    padding-top: 3%;
+  }
+
+
   h1 {
     font-size: 300%;
     margin: 1rem;
