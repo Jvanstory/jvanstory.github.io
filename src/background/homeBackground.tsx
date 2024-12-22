@@ -101,10 +101,19 @@ const HomeBackground: React.FC = () => {
         const x = window.innerWidth / 2 + Math.cos(angle) * (radius + linkOffset) - 15;
         const y = window.innerHeight / 2 + Math.sin(angle) * (radius + linkOffset) + 5;
 
-        return (
+        return link === 'Old Website' ? (
+          <a
+            key={index}
+            href="/oldWebsite"
+            className={`link ${isSmallScreen ? 'link-small' : ''}`}
+            style={isSmallScreen ? {} : { left: `${x}px`, top: `${y}px` }} // Inline styles for dynamic positioning
+          >
+            {link}
+          </a>
+        ) : (
           <Link
             key={index}
-            to={link === 'Old Website' ? '/oldWebsite' : `/${link.toLowerCase()}`}
+            to={`/${link.toLowerCase()}`}
             className={`link ${isSmallScreen ? 'link-small' : ''}`}
             style={isSmallScreen ? {} : { left: `${x}px`, top: `${y}px` }} // Inline styles for dynamic positioning
           >
